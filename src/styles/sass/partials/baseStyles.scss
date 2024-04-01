@@ -16,6 +16,7 @@ body {
   color: $black;
   background-color: $white;
   width: 100%;
+  max-width: 1580px;
 }
 
 .flex {
@@ -55,4 +56,5 @@ body {
 ul {
   list-style: none;
   display: flex;
+  padding: 0;
 }

@@ -1,4 +1,4 @@
-* {
+body {
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
@@ -23,6 +23,8 @@
 .highlighter-third,
 .highlighter-contrast {
   position: relative;
+  width: -moz-max-content;
+  width: max-content;
 }
 .highlighter-prim::before,
 .highlighter-accent::before,
@@ -30,17 +32,22 @@
 .highlighter-contrast::before {
   content: "";
   position: absolute;
-  height: 2rem;
+  height: 1rem;
   width: 100%;
   bottom: -1rem;
   opacity: 0.85;
   z-index: -1;
   filter: blur(2px);
-  transform: rotate(7deg);
+  transform: rotate(-7deg);
 }
 
 .highlighter-prim::before {
-  color: #8ecae6;
+  background-color: #8ecae6;
+}
+
+ul {
+  list-style: none;
+  display: flex;
 }
 
 @media (max-width: 479px) {

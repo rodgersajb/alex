@@ -8,6 +8,7 @@ body {
   color: #171717;
   background-color: #fcfcfc;
   width: 100%;
+  max-width: 1580px;
 }
 
 .flex {
@@ -48,4 +49,5 @@ body {
 ul {
   list-style: none;
   display: flex;
+  padding: 0;
 }/*# sourceMappingURL=baseStyles.css.map */
