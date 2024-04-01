@@ -1,4 +1,5 @@
 
+import MobileNav from './MobileNav';
 
 const Header = () => {
     return (
@@ -9,11 +10,12 @@ const Header = () => {
 
                 </div>
                 <div className="header-content">
-                    <h2>Oh Hi, Im Alex</h2>
+                    <h2 className='highlighter-prim'>Oh Hi, Im Alex</h2>
                     <h2></h2>
                 </div>
 
             </div>
+            <MobileNav />
         </header>
     )
 }

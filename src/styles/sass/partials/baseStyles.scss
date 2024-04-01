@@ -1,0 +1,58 @@
+$primary: #8ecae6;
+$secondary: #219ebc;
+$third: #023047;
+$accent: #ffb703;
+$contrast: #fb8500;
+$black: #171717;
+$white: #fcfcfc;
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Jost", sans-serif;
+  scroll-behavior: smooth;
+  color: $black;
+  background-color: $white;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.highlighter-prim,
+.highlighter-accent,
+.highlighter-third,
+.highlighter-contrast {
+  position: relative;
+  width: max-content;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 1rem;
+    width: 100%;
+    bottom: -1rem;
+    opacity: 0.85;
+    z-index: -1;
+    filter: blur(2px);
+    transform: rotate(-7deg);
+  }
+}
+
+.highlighter-prim {
+  &::before {
+    background-color: $primary;
+  }
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}

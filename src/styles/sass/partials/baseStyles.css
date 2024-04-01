@@ -1,0 +1,51 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Jost", sans-serif;
+  scroll-behavior: smooth;
+  color: #171717;
+  background-color: #fcfcfc;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.highlighter-prim,
+.highlighter-accent,
+.highlighter-third,
+.highlighter-contrast {
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+}
+.highlighter-prim::before,
+.highlighter-accent::before,
+.highlighter-third::before,
+.highlighter-contrast::before {
+  content: "";
+  position: absolute;
+  height: 1rem;
+  width: 100%;
+  bottom: -1rem;
+  opacity: 0.85;
+  z-index: -1;
+  filter: blur(2px);
+  transform: rotate(-7deg);
+}
+
+.highlighter-prim::before {
+  background-color: #8ecae6;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}/*# sourceMappingURL=baseStyles.css.map */
