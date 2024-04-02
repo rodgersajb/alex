@@ -1,0 +1,15 @@
+@media (max-width: 479px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  form .inputs {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+  }
+  form .inputs label {
+    font-size: 1.2rem;
+  }
+}/*# sourceMappingURL=contactform.css.map */

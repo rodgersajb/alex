@@ -19,6 +19,11 @@ body {
   display: flex;
 }
 
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 .grid {
   display: grid;
 }
@@ -38,7 +43,8 @@ button {
 .highlighter-prim,
 .highlighter-accent,
 .highlighter-third,
-.highlighter-contrast {
+.highlighter-contrast,
+.highlighter-second {
   position: relative;
   width: -moz-max-content;
   width: max-content;
@@ -46,7 +52,8 @@ button {
 .highlighter-prim::before,
 .highlighter-accent::before,
 .highlighter-third::before,
-.highlighter-contrast::before {
+.highlighter-contrast::before,
+.highlighter-second::before {
   content: "";
   position: absolute;
   height: 1rem;
@@ -62,8 +69,16 @@ button {
   background-color: #8ecae6;
 }
 
+.highlighter-second::before {
+  background-color: #219ebc;
+}
+
 .highlighter-accent::before {
   background-color: #ffb703;
+}
+
+.highlighter-contrast::before {
+  background-color: #fb8500;
 }
 
 ul {
@@ -226,5 +241,70 @@ p {
     position: absolute;
     top: 0;
     left: 50%;
+  }
+}
+@media (max-width: 479px) {
+  .about header {
+    background-color: #ffb703;
+  }
+  .about header .header-content {
+    background-color: #ffb703;
+  }
+  .about header .header-content h2 {
+    z-index: 5;
+  }
+  .about .flex-column {
+    border: 2px 2px 0 2px solid #171717;
+  }
+  .about .flex-column .flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about .flex-column .flex-container .content {
+    display: flex;
+    gap: 1rem;
+  }
+  .about .flex-column .text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #171717;
+  }
+  .about .flex-column .text-container p {
+    width: 90%;
+  }
+  .about .flex-column:nth-child(3) {
+    align-items: center;
+    padding: 2rem 0 2rem 0;
+    gap: 1rem;
+    background: #023047;
+  }
+  .about .flex-column:nth-child(3) h4 {
+    color: #fb8500;
+  }
+  .about .flex-column:nth-child(3) p {
+    color: #fcfcfc;
+    width: 90%;
+  }
+  .about .flex-column:nth-child(4) {
+    align-items: center;
+    padding: 2rem 0 2rem 0;
+    gap: 2rem;
+  }
+  .about .flex-column:nth-child(4) .content {
+    border: 2px solid #171717;
+    width: 90%;
+  }
+  .about .flex-column:nth-child(4) .content .image-container {
+    height: 200px;
+    background-color: #ffb703;
+    border-bottom: 2px solid #171717;
+  }
+  .about .flex-column:nth-child(4) .content .image-container:nth-child(1) {
+    background-color: #219ebc;
+  }
+  .about .flex-column:nth-child(4) .content .container {
+    padding: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */

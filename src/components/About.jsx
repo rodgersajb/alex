@@ -1,6 +1,9 @@
 import Alex from "../assets/alex2.png";
 
 import AboutGrid from "./AboutGrid";
+import MyStory from "./MyStory";
+import Routine from "./Routine";
+import ContactForm from "./ContactForm";
 
 const About = () => {
   return (
@@ -18,6 +21,9 @@ const About = () => {
         </div>
       </header>
       <AboutGrid />
+      <MyStory />
+      <Routine />
+      <ContactForm />
     </section>
   );
 };

@@ -1,6 +1,6 @@
 const AboutGrid = () => {
   return (
-    <div className="flex-col">
+    <div className="flex-column">
       <div className="flex-container">
         <div className="content">
           <h3 className="highlighter-accent">Family</h3>

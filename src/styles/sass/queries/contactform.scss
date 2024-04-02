@@ -1,0 +1,53 @@
+@media (max-width: 479px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $accent;
+
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      label {
+        font-size: 1rem;
+        color: $black;
+        padding: 0.2rem 0 0.4rem 0;
+      }
+      input {
+        color: $grey;
+        padding: 0.4rem 0 0.4rem 0.4rem;
+      }
+      input,
+      textarea {
+        border: none;
+        border-radius: 0.2rem;
+        border: 2px solid transparent;
+        cursor: pointer;
+        &:hover,
+        &:focus {
+          border: 2px solid $black;
+        }
+      }
+    }
+    .submit-button {
+      display: flex;
+      justify-content: flex-end;
+      width: 90%;
+      padding: 2rem 0;
+      button {
+        background-color: $black;
+        color: $white;
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+        border-radius: 2rem;
+        cursor: pointer;
+        transition: all ease-in-out 0.3s;
+        &:hover,
+        &:focus {
+          color: $accent;
+        }
+      }
+    }
+  }
+}

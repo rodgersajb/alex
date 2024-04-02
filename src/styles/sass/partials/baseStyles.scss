@@ -5,6 +5,7 @@ $accent: #ffb703;
 $contrast: #fb8500;
 $black: #171717;
 $white: #fcfcfc;
+$grey: #868e96;
 
 $text: "Jost", sans-serif;
 $accent-text: "Pacifico", sans-serif;
@@ -29,6 +30,11 @@ body {
   display: flex;
 }
 
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 .grid {
   display: grid;
 }
@@ -42,8 +48,11 @@ button {
   border: none;
   margin: 0;
   padding: 0;
-  
-  font: inherit;
+}
+
+input,
+textarea {
+  outline: none;
 }
 
 .highlighter-prim,
