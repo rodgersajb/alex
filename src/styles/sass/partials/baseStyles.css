@@ -38,7 +38,8 @@ button {
 .highlighter-prim,
 .highlighter-accent,
 .highlighter-third,
-.highlighter-contrast {
+.highlighter-contrast,
+.highlighter-second {
   position: relative;
   width: -moz-max-content;
   width: max-content;
@@ -46,7 +47,8 @@ button {
 .highlighter-prim::before,
 .highlighter-accent::before,
 .highlighter-third::before,
-.highlighter-contrast::before {
+.highlighter-contrast::before,
+.highlighter-second::before {
   content: "";
   position: absolute;
   height: 1rem;
@@ -62,8 +64,16 @@ button {
   background-color: #8ecae6;
 }
 
+.highlighter-second::before {
+  background-color: #219ebc;
+}
+
 .highlighter-accent::before {
   background-color: #ffb703;
+}
+
+.highlighter-contrast::before {
+  background-color: #fb8500;
 }
 
 ul {

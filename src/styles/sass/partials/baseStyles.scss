@@ -49,7 +49,8 @@ button {
 .highlighter-prim,
 .highlighter-accent,
 .highlighter-third,
-.highlighter-contrast {
+.highlighter-contrast,
+.highlighter-second {
   position: relative;
   width: max-content;
 
@@ -72,9 +73,21 @@ button {
   }
 }
 
+.highlighter-second {
+  &::before {
+    background-color: $secondary;
+  }
+}
+
 .highlighter-accent {
   &::before {
     background-color: $accent;
+  }
+}
+
+.highlighter-contrast {
+  &::before {
+    background-color: $contrast;
   }
 }
 

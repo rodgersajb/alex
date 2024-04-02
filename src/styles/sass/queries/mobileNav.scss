@@ -1,0 +1,40 @@
+@media (max-width: 479px) {
+  .mobile-nav {
+    display: flex;
+    width: 100%;
+    border-radius: 2rem 2rem 0 0;
+    position: relative;
+    background-color: $white;
+
+    ul {
+      width: 100%;
+      justify-content: space-around;
+      align-items: flex-end;
+      padding: 0.6rem 0 0.6rem 0;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+        transition: all ease-in-out 0.3s;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+          color: $primary;
+        }
+        h5,
+        svg {
+          font-size: 1rem;
+        }
+      }
+      .alex-logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+      }
+    }
+  }
+}

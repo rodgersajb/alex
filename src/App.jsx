@@ -1,9 +1,13 @@
-import "./styles/sass/style.scss";import Header from "./components/Header";
+import "./styles/sass/style.scss";
+
+
+import MobileNav from "./components/MobileNav";
 
 function App() {
   return (
     <>
-      <Header />
+      
+      <MobileNav />
     </>
   );
 }
