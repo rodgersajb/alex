@@ -2,35 +2,102 @@
   header {
     height: 100svh;
     width: 100%;
+    background: $accent;
+
     .header-grid {
       height: 100%;
       display: grid;
       grid-column: 1fr;
       grid-template-rows: 4fr 4fr 1fr;
 
-      background-color: $accent;
+      // background-color: $accent;
 
       .header-image {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
+        justify-content: center;
+        background-color: $accent;
+
         img {
-          width: 100%;
+          width: 75%;
         }
       }
       .header-content {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
         background-color: $primary;
-        z-index: 999;
+        // &:before {
+        //   content: "";
+        //   position: absolute;
+        //   height: 100%;
+        //   width: 100%;
+        //   bottom: 0;
+        //   background-color: $accent;
+        //   clip-path: polygon(0 87%, 100% 69%, 100% 100%, 0% 100%);
+        // }
+        .headings-container {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          width: 75%;
+          .flex {
+            align-items: center;
+            gap: 1rem;
+            h2 {
+              z-index: 5;
+            }
+            svg {
+              font-size: 1.6rem;
+            }
+          }
+        }
 
         h2 {
           font-size: 2.2rem;
         }
         .cursive-text {
           z-index: 20;
+        }
+        .header-buttons {
+          display: flex;
+          gap: 0.6rem;
+          width: 75%;
+          align-items: center;
+          justify-content: center;
+          button {
+            padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+            font-size: 1rem;
+            border-radius: 0.8rem;
+            width: 100%;
+            cursor: pointer;
+            font-family: $text;
+            transition: all ease-in-out 0.3s;
+            &:hover,
+            &:focus {
+              transform: translateY(0.6rem);
+            }
+          }
+          button:first-child {
+            color: $white;
+            background-color: $black;
+            &:hover,
+            &:focus {
+              color: $accent;
+            }
+          }
+          button:nth-child(2) {
+            color: $black;
+            background-color: $accent;
+            &:hover,
+            &:focus {
+              color: $white;
+            }
+          }
         }
       }
       .mobile-nav {
@@ -51,10 +118,16 @@
             align-items: center;
             justify-content: center;
             gap: 0.6rem;
+            transition: all ease-in-out 0.3s;
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+              color: $primary;
+            }
             h5,
             svg {
               font-size: 1rem;
-              cursor: pointer;
             }
           }
           .alex-logo {
