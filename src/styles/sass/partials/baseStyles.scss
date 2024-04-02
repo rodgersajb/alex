@@ -19,12 +19,20 @@ body {
   max-width: 1580px;
 }
 
+.cursive-text {
+  font-family: "Pacifico", sans-serif;
+}
+
 .flex {
   display: flex;
 }
 
 .grid {
   display: grid;
+}
+
+img {
+  width: 100%;
 }
 
 .highlighter-prim,
@@ -39,11 +47,11 @@ body {
     position: absolute;
     height: 1rem;
     width: 100%;
-    bottom: -1rem;
+    bottom: 0.4rem;
     opacity: 0.85;
     z-index: -1;
     filter: blur(2px);
-    transform: rotate(-7deg);
+    transform: rotate(-1deg);
   }
 }
 
@@ -53,8 +61,27 @@ body {
   }
 }
 
+.highlighter-accent {
+  &::before {
+    background-color: $accent;
+  }
+}
+
 ul {
   list-style: none;
   display: flex;
   padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+p {
+  font-size: 1.6rem;
 }

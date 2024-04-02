@@ -7,21 +7,61 @@
       display: grid;
       grid-column: 1fr;
       grid-template-rows: 4fr 4fr 1fr;
-      align-content: space-between;
+
+      background-color: $accent;
 
       .header-image {
-        // height: 45svh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        img {
+          width: 100%;
+        }
       }
       .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary;
+        z-index: 999;
+
+        h2 {
+          font-size: 2.2rem;
+        }
+        .cursive-text {
+          z-index: 20;
+        }
       }
       .mobile-nav {
         display: flex;
         width: 100%;
+        border-radius: 2rem 2rem 0 0;
+        position: relative;
+        background-color: $white;
 
         ul {
           width: 100%;
+          justify-content: space-around;
+          align-items: flex-end;
 
-          justify-content: space-between;
+          li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            h5,
+            svg {
+              font-size: 1rem;
+              cursor: pointer;
+            }
+          }
+          .alex-logo {
+            position: absolute;
+            top: 0;
+            left: 50%;
+          }
         }
       }
     }
