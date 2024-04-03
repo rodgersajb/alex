@@ -41,6 +41,16 @@
         align-items: center;
         justify-content: center;
         border-radius: 0.8rem 0.8rem 0rem 5rem;
+        img {
+          width: 60%;
+          border-radius: 1rem;
+          transition: all ease-in 0.3s;
+          cursor: pointer;
+          &:hover,
+          &:focus {
+            width: 65%;
+          }
+        }
       }
       ul {
         gap: 0.6rem;
@@ -76,34 +86,32 @@
         border: 2px solid $third;
         border-radius: 1rem;
         .image-container {
-            background-color: $third;
+          background-color: $third;
         }
         li {
-            color: $third;
+          color: $third;
         }
       }
       .post-it {
         border: 2px solid $secondary;
         border-radius: 1rem;
         .image-container {
-            background-color: $secondary;
+          background-color: $secondary;
         }
         li {
-            color: $secondary;
+          color: $secondary;
         }
       }
       .daily-planner {
         border: 2px solid $accent;
         border-radius: 1rem;
         .image-container {
-            background-color: $accent;
-
+          background-color: $accent;
         }
         li {
-            color: $accent;
+          color: $accent;
         }
       }
-      
     }
   }
 }

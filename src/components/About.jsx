@@ -3,7 +3,7 @@ import Alex from "../assets/alex2.png";
 import AboutGrid from "./AboutGrid";
 import MyStory from "./MyStory";
 import Routine from "./Routine";
-import ContactForm from "./ContactForm";
+import FooterForm from "./ContactForm";
 
 const About = () => {
   return (
@@ -23,7 +23,7 @@ const About = () => {
       <AboutGrid />
       <MyStory />
       <Routine />
-      <ContactForm />
+      <FooterForm />
     </section>
   );
 };

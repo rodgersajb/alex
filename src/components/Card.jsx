@@ -3,11 +3,14 @@ const Card = (cards) => {
 
   const stacks = card.stack || [];
   const icons = card.icons || [];
-  console.log(icons);
+  console.log(card);
 
   return (
     <div className={card.class}>
-      <div className="image-container"></div>
+      <div className="image-container">
+        
+        <img src={card.image} alt="" />
+        </div>
       <div className="content">
         <h3>{card.title}</h3>
         <ul className="stack">

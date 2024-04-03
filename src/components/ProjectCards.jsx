@@ -3,12 +3,19 @@ import Card from "./Card";
 import { EachElement } from "../hooks/Each";
 import icons from "../hooks/Icons";
 
+import jobi from '../assets/jobi.jpg';
+import moviebase from '../assets/moviebase.jpg';
+import heartsync from '../assets/heartsync.jpg';
+import post from '../assets/post-it.jpg';
+import planner from '../assets/post-it.jpg';
+
 const ProjectCards = () => {
   console.log(icons.FaSass);
   const projectCards = [
     {
       title: "Jobi",
       class: "jobi",
+      image: jobi,
       stack: [
         <icons.FaHtml5 key="html" />,
         <icons.FaSass key="sass" />,
@@ -21,6 +28,7 @@ const ProjectCards = () => {
     {
       title: "Moviebase",
       class: "moviebase",
+      image: moviebase,
       stack: [
         <icons.FaHtml5 key="html" />,
         <icons.FaSass key="sass" />,
@@ -33,6 +41,7 @@ const ProjectCards = () => {
     {
       title: "HeartSync",
       class: "heart-sync",
+      image: heartsync,
       stack: [
         <icons.FaWordpress key="wordpress" />,
         <icons.FaElementor key="elementor" />,
@@ -43,6 +52,7 @@ const ProjectCards = () => {
     {
       title: "Post It!",
       class: "post-it",
+      image: post,
       stack: [
         <icons.FaHtml5 key="html" />,
         <icons.FaSass key="sass" />,
@@ -57,6 +67,7 @@ Post it! This app will generate random post its displayed across the page. Users
     {
       title: "Daily Planner",
       class: "daily-planner",
+      image: planner,
       stack: [
         <icons.FaHtml5 key="html" />,
         <icons.FaSass key="sass" />,

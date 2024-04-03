@@ -1,28 +1,44 @@
 const ContactForm = () => {
   return (
-    <>
-      <div className="form-content">
-        <h2>Feel like chatting? Me too.</h2>
-        <h5>Throw me an email anytime. I will get back to you I promise.</h5>
+    <form id="contact-form"action="">
+      <div className="flex-column">
+        <label htmlFor="first-name">First Name</label>
+        <input id="first-name" type="text" placeholder="First Name" />
       </div>
-      <form action="">
-        <div className="inputs">
-          <label htmlFor="first-name">First Name</label>
-          <input id="first-name" type="text" placeholder="First Name" />
-        </div>
-        <div className="inputs">
-          <label htmlFor="email">Email Address</label>
-          <input id="email" type="text" placeholder="Email Address" />
-        </div>
-        <div className="inputs">
-          <label htmlFor="message">Message</label>
-          <textarea name="message" id="message" cols="30" rows="10"></textarea>
-        </div>
-        <div className="submit-button">
-          <button>Submit Form</button>
-        </div>
-      </form>
-    </>
+      <div className="flex-column">
+        <label htmlFor="last-name">Last Name</label>
+        <input id="last-name" type="text" placeholder="...if you want" />
+      </div>
+      <div className="flex-column">
+        <label htmlFor="email">
+          {" "}
+          Email<span className="required">*</span>
+        </label>
+        <input type="text" id="email" placeholder="Email Address" />
+      </div>
+      <div className="flex-column">
+        <label htmlFor="subject">Subject</label>
+        <input type="text" id="subject" placeholder="subject" />
+      </div>
+      <div className="flex-column">
+        <label htmlFor="message">
+          Your Message <span className="required">*</span>
+        </label>
+        <textarea
+          name="message"
+          id="message"
+          cols="30"
+          rows="10"
+          placeholder="Your Message"
+          defaultValue="Your Message"
+        >
+          
+        </textarea>
+      </div>
+      <div className="button-container">
+        <button>Send Away!</button>
+      </div>
+    </form>
   );
 };
 

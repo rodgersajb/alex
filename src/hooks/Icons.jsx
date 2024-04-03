@@ -7,6 +7,8 @@ import {
   FaElementor,
   FaGithub,
   FaLink,
+  FaLinkedinIn,
+  FaTwitter,
 } from "react-icons/fa";
 import { IoLogoFirebase } from "react-icons/io5";
 
@@ -20,7 +22,9 @@ const icons = {
   FaElementor,
   FaGithub,
   FaLink,
-  IoLogoFirebase
+  IoLogoFirebase,
+  FaLinkedinIn,
+  FaTwitter
 
 };
 
