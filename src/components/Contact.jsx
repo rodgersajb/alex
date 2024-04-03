@@ -26,15 +26,15 @@ const Contact = () => {
         </div>
         <div className="flex-column">
           <h5>
-            <span className="highlighter-second white">Question?</span>{" "}
-            <span className="black">
+            <span className="highlighter-second white">Question?</span>
+            
               Thinking about working together but need to know more?
-            </span>{" "}
+            
             Need a <span className="highlighter-accent white">hot sauce </span>recipe?
           </h5>
           <h5></h5>
           <h5>
-            Feel free to{" "}
+            Feel free to
             <span className="highlighter-prim white">drop me a line.</span>
             <FaHandPointDown />
           </h5>
