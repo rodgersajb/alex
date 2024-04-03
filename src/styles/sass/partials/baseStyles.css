@@ -120,6 +120,7 @@ h5 {
   font-size: clamp(1.4rem, 4vw, 1.8rem);
 }
 
-p {
-  font-size: clamp(1rem, 4vw, 1.6rem);
+p,
+svg {
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
 }/*# sourceMappingURL=baseStyles.css.map */

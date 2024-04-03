@@ -1,0 +1,109 @@
+@media (max-width: 479px) {
+  .projects {
+    header {
+      background-color: $contrast;
+      .header-grid {
+        .header-content {
+          position: relative;
+          background-color: $contrast;
+          img {
+            position: absolute;
+            bottom: 0;
+          }
+
+          .headings-container {
+            display: flex;
+            align-items: center;
+          }
+          h2,
+          h5 {
+            z-index: 9;
+          }
+        }
+        .header-image {
+          background-color: $primary;
+          justify-content: center;
+        }
+      }
+    }
+    .cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      width: 90%;
+      margin: 0 auto;
+      padding: 2rem 0;
+      .image-container {
+        min-height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.8rem 0.8rem 0rem 5rem;
+      }
+      ul {
+        gap: 0.6rem;
+      }
+      h3 {
+        padding: 0 0 1rem 0;
+      }
+      .content {
+        padding: 0 1rem;
+        align-items: flex-start;
+      }
+      .jobi {
+        border: 2px solid $contrast;
+        border-radius: 1rem;
+        .image-container {
+          background-color: $contrast;
+        }
+        li {
+          color: $accent;
+        }
+      }
+      .moviebase {
+        border: 2px solid $primary;
+        border-radius: 1rem;
+        .image-container {
+          background-color: $primary;
+        }
+        li {
+          color: $primary;
+        }
+      }
+      .heart-sync {
+        border: 2px solid $third;
+        border-radius: 1rem;
+        .image-container {
+            background-color: $third;
+        }
+        li {
+            color: $third;
+        }
+      }
+      .post-it {
+        border: 2px solid $secondary;
+        border-radius: 1rem;
+        .image-container {
+            background-color: $secondary;
+        }
+        li {
+            color: $secondary;
+        }
+      }
+      .daily-planner {
+        border: 2px solid $accent;
+        border-radius: 1rem;
+        .image-container {
+            background-color: $accent;
+
+        }
+        li {
+            color: $accent;
+        }
+      }
+      
+    }
+  }
+}

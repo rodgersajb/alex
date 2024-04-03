@@ -37,7 +37,11 @@ button {
   border: none;
   margin: 0;
   padding: 0;
-  font: inherit;
+}
+
+input,
+textarea {
+  outline: none;
 }
 
 .highlighter-prim,
@@ -306,5 +310,70 @@ p {
   }
   .about .flex-column:nth-child(4) .content .container {
     padding: 1rem;
+  }
+}
+@media (max-width: 479px) {
+  .form-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 400px;
+    background-color: #8ecae6;
+  }
+  .form-content h2,
+  .form-content h5 {
+    width: 90%;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffb703;
+    padding: 2rem 0 0 0;
+  }
+  form .inputs {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  form .inputs label {
+    font-size: 1rem;
+    color: #171717;
+    padding: 0.2rem 0 0.4rem 0;
+  }
+  form .inputs input {
+    color: #868e96;
+    padding: 0.4rem 0 0.4rem 0.4rem;
+  }
+  form .inputs input,
+  form .inputs textarea {
+    border: none;
+    border-radius: 0.2rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+  }
+  form .inputs input:hover, form .inputs input:focus,
+  form .inputs textarea:hover,
+  form .inputs textarea:focus {
+    border: 2px solid #171717;
+  }
+  form .submit-button {
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+    padding: 2rem 0;
+  }
+  form .submit-button button {
+    background-color: #171717;
+    color: #fcfcfc;
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+  }
+  form .submit-button button:hover, form .submit-button button:focus {
+    color: #ffb703;
   }
 }/*# sourceMappingURL=style.css.map */
