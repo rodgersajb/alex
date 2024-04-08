@@ -1,28 +1,29 @@
 @media (max-width: 479px) {
   .projects {
     header {
-      background-color: $contrast;
-      .header-grid {
-        .header-content {
-          position: relative;
-          background-color: $contrast;
-          img {
-            position: absolute;
-            bottom: 0;
-          }
-
-          .headings-container {
-            display: flex;
-            align-items: center;
-          }
-          h2,
-          h5 {
-            z-index: 9;
-          }
+      position: relative;
+      background-color: $white;
+      .flex-column:first-child {
+        background-color: $secondary;
+        justify-content: center;
+        gap: 1rem;
+        h2,
+        h4 {
+          z-index: 5;
         }
-        .header-image {
+      }
+      .socials {
+        &::after {
           background-color: $primary;
-          justify-content: center;
+        }
+        &::before {
+          background-color: $secondary;
+        }
+      }
+      .flex-column:last-child {
+        background-color: $primary;
+        img {
+          width: 75%;
         }
       }
     }

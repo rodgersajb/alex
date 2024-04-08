@@ -150,4 +150,150 @@ h5 {
 p,
 svg {
   font-size: clamp(1.2rem, 4vw, 1.8rem);
+}
+
+.button-container {
+  display: flex;
+  gap: 0.6rem;
+  width: 75%;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+}
+.button-container button {
+  padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+  font-size: 1rem;
+  border-radius: 0.8rem;
+  width: 100%;
+  cursor: pointer;
+  font-family: "Jost", sans-serif;
+  transition: all ease-in-out 0.3s;
+}
+.button-container button:hover, .button-container button:focus {
+  transform: translateY(0.6rem);
+}
+.button-container button:first-child {
+  color: #fcfcfc;
+  background-color: #171717;
+}
+.button-container button:first-child:hover, .button-container button:first-child:focus {
+  color: #ffb703;
+}
+.button-container button:nth-child(2) {
+  color: #171717;
+  background-color: #ffb703;
+}
+.button-container button:nth-child(2):hover, .button-container button:nth-child(2):focus {
+  color: #fcfcfc;
+}
+
+@media (max-width: 479px) {
+  .home header,
+  .about header,
+  .projects header,
+  .contact header {
+    height: 100svh;
+    position: relative;
+  }
+  .home header .flex-column,
+  .about header .flex-column,
+  .projects header .flex-column,
+  .contact header .flex-column {
+    height: 45%;
+    justify-content: center;
+    align-items: center;
+  }
+  .home header .socials,
+  .about header .socials,
+  .projects header .socials,
+  .contact header .socials {
+    position: relative;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+  }
+  .home header .socials::before,
+  .about header .socials::before,
+  .projects header .socials::before,
+  .contact header .socials::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    right: 0;
+  }
+  .home header .socials::after,
+  .about header .socials::after,
+  .projects header .socials::after,
+  .contact header .socials::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    left: 0;
+  }
+  .home header .socials .border,
+  .about header .socials .border,
+  .projects header .socials .border,
+  .contact header .socials .border {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #fcfcfc;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 4rem 0 4rem;
+    z-index: 5;
+  }
+  .home header .flex-column:first-child,
+  .about header .flex-column:first-child,
+  .projects header .flex-column:first-child,
+  .contact header .flex-column:first-child {
+    border-radius: 0 0 0 6rem;
+  }
+  .home header .flex-column:first-child img,
+  .about header .flex-column:first-child img,
+  .projects header .flex-column:first-child img,
+  .contact header .flex-column:first-child img {
+    width: 75%;
+  }
+  .home header .flex-column:last-child,
+  .about header .flex-column:last-child,
+  .projects header .flex-column:last-child,
+  .contact header .flex-column:last-child {
+    border-radius: 0 6rem 0 0;
+    gap: 1rem;
+  }
+  .home header .flex-column:last-child h5,
+  .about header .flex-column:last-child h5,
+  .projects header .flex-column:last-child h5,
+  .contact header .flex-column:last-child h5 {
+    width: 90%;
+    color: #171717;
+    z-index: 5;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .home header .flex-column:last-child h5 .white,
+  .about header .flex-column:last-child h5 .white,
+  .projects header .flex-column:last-child h5 .white,
+  .contact header .flex-column:last-child h5 .white {
+    color: #fcfcfc;
+  }
+  .home header .flex-column:last-child h5 svg,
+  .about header .flex-column:last-child h5 svg,
+  .projects header .flex-column:last-child h5 svg,
+  .contact header .flex-column:last-child h5 svg {
+    padding: 0 0 0 1rem;
+  }
+  .home header .flex-column:last-child h5:nth-of-type(2),
+  .about header .flex-column:last-child h5:nth-of-type(2),
+  .projects header .flex-column:last-child h5:nth-of-type(2),
+  .contact header .flex-column:last-child h5:nth-of-type(2) {
+    text-align: right;
+  }
 }/*# sourceMappingURL=baseStyles.css.map */

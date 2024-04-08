@@ -1,0 +1,70 @@
+@media (max-width: 479px) {
+  .navbar {
+    display: none;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+
+  background-color: transparent;
+  position: fixed;
+  z-index: 5;
+
+  ul {
+    li {
+      font-size: clamp(1rem, 4vw, 1.4rem);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all ease-in-out 0.3s;
+      &:hover,
+      &:focus {
+        color: $white;
+      }
+    }
+  }
+
+  ul:nth-of-type(1) {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    align-items: center;
+    width: 35%;
+  }
+  a {
+    text-decoration: none;
+    color: $black;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-family: $accent-text;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+  ul:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    place-items: center;
+    width: 35%;
+    li:first-child {
+      grid-column: span 2;
+      
+    }
+    
+    a {
+      cursor: pointer;
+      transition: all ease-in-out 0.3s;
+      &:hover,
+      &:focus {
+        color: $white;
+      }
+    }
+  }
+}

@@ -1,13 +1,14 @@
 import "./styles/sass/style.scss";
 
 
-import MobileNav from "./components/MobileNav";
+
+import Header from "./components/Header";
 
 function App() {
   return (
     <>
+    <Header />
       
-      <MobileNav />
     </>
   );
 }

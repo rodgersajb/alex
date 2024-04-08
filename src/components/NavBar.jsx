@@ -1,8 +1,6 @@
-import { BiCodeAlt, BiMobileAlt, BiParty } from "react-icons/bi";
 import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaHandHolding } from "react-icons/fa";
 
-import { useState } from "react";
+import { headerContent } from "../hooks/HeaderContent";
 
 import Home from "./Home";
 import About from "./About";
@@ -10,10 +8,9 @@ import FunStuff from "./FunStuff";
 import Projects from "./Projects";
 import Contact from "./Contact";
 
-import { headerContent } from "../hooks/HeaderContent";
+import { useState } from "react";
 
-const MobileNav = () => {
-  console.log({ headerContent });
+const NavBar = () => {
   const [activeTab, setActiveTab] = useState("");
 
   const handleTabClick = (track) => {
@@ -21,42 +18,6 @@ const MobileNav = () => {
   };
   return (
     <>
-      <nav className="mobile-nav">
-        <ul>
-          <li
-            className={`${activeTab === "" ? "color: red" : ""}`}
-            onClick={() => handleTabClick("about")}
-          >
-            <FaHandHolding />
-            <h5>About</h5>
-          </li>
-          <li
-            className={`${activeTab === "" ? "color: red" : ""}`}
-            onClick={() => handleTabClick("fun-stuff")}
-          >
-            <BiParty />
-            <h5>Fun Stuff</h5>
-          </li>
-
-          <li className="alex-logo">
-            <h5 className="logo-text">AR</h5>
-          </li>
-          <li
-            className={`${activeTab === "" ? "color: red" : ""}`}
-            onClick={() => handleTabClick("projects")}
-          >
-            <BiCodeAlt />
-            <h5>Projects</h5>
-          </li>
-          <li
-            className={`${activeTab === "" ? "color: red" : ""}`}
-            onClick={() => handleTabClick("contact")}
-          >
-            <BiMobileAlt />
-            <h5>Contact</h5>
-          </li>
-        </ul>
-      </nav>
       <nav className="navbar">
         <ul>
           <li
@@ -103,7 +64,6 @@ const MobileNav = () => {
           </li>
         </ul>
       </nav>
-
       {activeTab === "" && <Home props={headerContent[0]} />}
       {activeTab === "about" && <About props={headerContent[1]} />}
       {activeTab === "fun-stuff" && <FunStuff />}
@@ -113,4 +73,4 @@ const MobileNav = () => {
   );
 };
 
-export default MobileNav;
+export default NavBar;

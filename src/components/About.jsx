@@ -1,23 +1,35 @@
-import Alex from "../assets/alex2.png";
+import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 
 import AboutGrid from "./AboutGrid";
 import MyStory from "./MyStory";
 import Routine from "./Routine";
-import FooterForm from "./ContactForm";
+import FooterForm from "./FooterForm";
 
-const About = () => {
+const About = (props) => {
   return (
-    <section className="about">
+    <section className={props.props.class}>
       <header>
-        <div className="header-grid">
-          <div className="header-content">
-            <div className="headings-container">
-              <h2 className="highlighter-prim">About Alex</h2>
-            </div>
+        <div className="flex-column">
+          <h2 className={props.class}>{props.props.title}</h2>
+          <h2 className={props.class}>{props.props.heading2}</h2>
+          <h2 className={props.class}>
+            {props.props.heading3}
+            {props.props.icon}
+          </h2>
+          <div className="button-container">
+            <button>{props.props.button1}</button>
+            <button>{props.props.button2}</button>
           </div>
-          <div className="header-image">
-            <img src={Alex} alt="This is Alex, the developer of this portfolio!" />
+        </div>
+        <div className="socials">
+          <div className="border">
+            <FaGithub />
+            <FaLinkedin />
+            <FaTwitter />
           </div>
+        </div>
+        <div className="flex-column">
+          <img src={props.props.image} alt="" />
         </div>
       </header>
       <AboutGrid />

@@ -1,17 +1,39 @@
 @media (max-width: 479px) {
   .about {
-    header {
-      background-color: $accent;
-      .header-content {
-        background-color: $accent;
-        h2 {
-            z-index: 5;
-        }
+    
+      header {
         
-      }
+  background-color: $white;
+  .flex-column:first-child {
+    background-color: $contrast;
+  }
+  .socials {
+    &::after {
+      background-color: $primary;
     }
+    &::before {
+      background-color: $contrast;
+    }
+  }
+  .flex-column:last-child {
+    background-color: $primary;
+    img {
+      width: 75%;
+    }
+  }
+}
+
+
+
+.about-grid {
+
+    padding-top: 10%;
+
+
     .flex-column {
+        margin-top: 10%;
         border: 2px 2px 0 2px solid $black;
+       
         .flex-container {
             display: flex;
             flex-direction: column;
@@ -32,7 +54,9 @@
                 width: 90%;
             }
         }
+    
     }
+}
     .flex-column:nth-child(3) {
         align-items: center;
         padding: 2rem 0 2rem 0;

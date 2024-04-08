@@ -1,15 +1,16 @@
 import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 
-import ProjectCards from "./ProjectCards";
-
-const Projects = (props) => {
+const Home = (props) => {
   return (
     <section className={props.props.class}>
       <header>
         <div className="flex-column">
-          <h2 className={props.props.style1}>{props.props.heading1}</h2>
-          <h4 className={props.props.style1}>{props.props.heading2}</h4>
-         
+          <h2 className={props.class}>{props.props.heading1}</h2>
+          <h2 className={props.class}>{props.props.heading2}</h2>
+          <h2 className={props.class}>
+            {props.props.heading3}
+            {props.props.icon}
+          </h2>
           <div className="button-container">
             <button>{props.props.button1}</button>
             <button>{props.props.button2}</button>
@@ -26,10 +27,7 @@ const Projects = (props) => {
           <img src={props.props.image} alt="" />
         </div>
       </header>
-
-      <ProjectCards />
     </section>
   );
 };
-
-export default Projects;
+export default Home;

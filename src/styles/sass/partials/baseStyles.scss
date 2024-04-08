@@ -162,3 +162,133 @@ p,
 svg {
   font-size: clamp(1.2rem, 4vw, 1.8rem);
 }
+
+ .button-container {
+          display: flex;
+          gap: 0.6rem;
+          width: 75%;
+          align-items: center;
+          justify-content: center;
+          padding-top: 1rem;
+          button {
+            padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+            font-size: 1rem;
+            border-radius: 0.8rem;
+            width: 100%;
+            cursor: pointer;
+            font-family: $text;
+            transition: all ease-in-out 0.3s;
+            &:hover,
+            &:focus {
+              transform: translateY(0.6rem);
+            }
+          }
+          button:first-child {
+            color: $white;
+            background-color: $black;
+            &:hover,
+            &:focus {
+              color: $accent;
+            }
+          }
+          button:nth-child(2) {
+            color: $black;
+            background-color: $accent;
+            &:hover,
+            &:focus {
+              color: $white;
+            }
+          }
+       }
+
+
+//////////////////////////////////////////////////
+///  put these in header query scss 🍴👇👇👇
+
+
+@media (max-width: 479px) {
+
+
+.home header,
+.about header,
+.projects header,
+.contact header {
+      height: 100svh;
+      
+      position: relative;
+      .flex-column {
+        height: 45%;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      
+      .socials {
+        position: relative;
+        width: 100%;
+        height: 10%;        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+        z-index: 5;
+        &::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 20%;
+            // background-color: $accent;
+            right: 0;
+        }
+          &::after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 20%;
+            // background-color: $contrast;
+            left: 0;
+        }
+        .border {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+          background-color: $white;
+          width: 100%;
+          height: 100%;
+          border-radius: 0 4rem 0 4rem;
+          z-index: 5;
+        
+        }
+      }
+      .flex-column:first-child {
+        
+        border-radius: 0 0 0 6rem;
+        img {
+            width: 75%
+        };
+      }
+      .flex-column:last-child {
+        // background: $contrast;
+        border-radius: 0 6rem 0 0;
+        gap: 1rem;
+        h5 {
+            width: 90%;
+            color: $black;
+            z-index: 5;
+            font-size: 1rem;
+            font-weight: 600;
+            .white {
+                color: $white;
+            }
+            
+            svg {
+                padding:  0 0 0 1rem;
+            }
+        }
+        h5:nth-of-type(2) {
+            text-align: right;
+        }
+      }
+    }
+  }

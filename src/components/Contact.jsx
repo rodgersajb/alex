@@ -12,7 +12,7 @@ import {
 const Contact = () => {
   return (
     <section className="contact">
-      <header className="header">
+      <header>
         <div className="flex-column">
           <img src={layingdoodle} alt="" />
           <h2 className="highlighter-prim">Contact Alex</h2>
@@ -26,15 +26,13 @@ const Contact = () => {
         </div>
         <div className="flex-column">
           <h5>
-            <span className="highlighter-second white">Question?</span>
-            
-              Thinking about working together but need to know more?
-            
-            Need a <span className="highlighter-accent white">hot sauce </span>recipe?
+            <span className="highlighter-second white">Question?</span> Thinking
+            about working together but need to know more? Need a{" "}
+            <span className="highlighter-contrast white">hot sauce </span>recipe?
           </h5>
           <h5></h5>
           <h5>
-            Feel free to
+            Feel free to{" "}
             <span className="highlighter-prim white">drop me a line.</span>
             <FaHandPointDown />
           </h5>
