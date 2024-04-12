@@ -1,5 +1,6 @@
 const Routine = () => {
   return (
+    
     <div className="flex-column">
       <div className="content">
         <div className="image-container"></div>

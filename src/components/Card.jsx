@@ -3,16 +3,15 @@ const Card = (cards) => {
 
   const stacks = card.stack || [];
   const icons = card.icons || [];
-  console.log(card);
+ 
 
   return (
-    <div className={card.class}>
+    <div className={card.class }>
       <div className="image-container">
-        
         <img src={card.image} alt="" />
-        </div>
+      </div>
       <div className="content">
-        <h3>{card.title}</h3>
+        <h3 className={card.highlighter}>{card.title}</h3>
         <ul className="stack">
           {stacks.map((stack, index) => {
             return <li key={index}>{stack}</li>;
@@ -20,9 +19,16 @@ const Card = (cards) => {
         </ul>
 
         <p>{card.content}</p>
+
         <ul className="icons">
           {icons.map((icon, index) => {
-            return <li key={index}>{icon}</li>;
+            return (
+              
+              <li  key={index}>
+                {icon.key}
+                {icon}
+              </li>
+            );
           })}
         </ul>
       </div>

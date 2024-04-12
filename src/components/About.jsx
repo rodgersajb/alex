@@ -4,6 +4,7 @@ import AboutGrid from "./AboutGrid";
 import MyStory from "./MyStory";
 import Routine from "./Routine";
 import FooterForm from "./FooterForm";
+import Footer from "./Footer";
 
 const About = (props) => {
   return (
@@ -36,6 +37,7 @@ const About = (props) => {
       <MyStory />
       <Routine />
       <FooterForm />
+      <Footer />
     </section>
   );
 };

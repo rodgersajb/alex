@@ -1,59 +1,55 @@
 .about-grid {
-    .flex-column {
-        flex-direction: row;
-        padding: 0 1rem 0 1rem;
-        border: 2px solid $black;
-        .flex-container:nth-of-type(1) {
-            border-right: 2px solid $black;
-            
-        }
-        .flex-container:nth-of-type(2) {
-            border-right: 2px solid $black;
-        }
-        .flex-container {
-            display: flex;
-            flex-direction: column;
-            width: calc(100% / 3 );
-            .text-container {
-                width: 95%;
-                margin: 0 auto;
-            }
-            
-            
-            .content {
-                display: flex;
-                margin: 0 auto;
-                gap: 2rem;
-                h3:nth-child(2) {
-                    width: max-content;
-                }
-            }
-        }
-
+  .flex-column {
+    flex-direction: row;
+    padding: 0 1rem 0 1rem;
+    border: 2px solid $black;
+    .flex-container:nth-of-type(1) {
+      border-right: 2px solid $black;
     }
+    .flex-container:nth-of-type(2) {
+      border-right: 2px solid $black;
+    }
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      width: calc(100% / 3);
+      .text-container {
+        width: 95%;
+        margin: 0 auto;
+      }
+
+      .content {
+        display: flex;
+        margin: 0 auto;
+        gap: 2rem;
+        h3:nth-child(2) {
+          width: max-content;
+        }
+      }
+    }
+  }
 }
-.flex-column:nth-child(3) {
-    background: $third;
-    color: $white;
-    padding: 4rem 0 4rem 0;
-    align-items: center;
-    h4 {
-        
-        color: $contrast;
+.my-story {
+    .flex-column {
+  background: $third;
+  color: $white;
+  padding: 4rem 0 4rem 0;
+  align-items: center;
+  h4 {
+    color: $contrast;
+  }
 
-    }
-
-    p {
-        width: 60%;
-        text-align: center;
-    }
-  
+  p {
+    width: 60%;
+    text-align: center;
+  }
+}
 }
 .flex-column:nth-child(4) {
-    flex-direction: row;
-    justify-content: center;
-    
-    .content {
-        width: 40%;
-    }
+  flex-direction: row;
+  justify-content: center;
+
+  .content {
+    width: 40%;
+  }
 }

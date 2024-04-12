@@ -125,6 +125,12 @@ textarea {
   }
 }
 
+.highlighter-third {
+  &::before {
+    background-color: $third;
+  }
+}
+
 ul {
   list-style: none;
   display: flex;

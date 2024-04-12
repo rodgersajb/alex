@@ -1,8 +1,9 @@
 const MyStory = () => {
   return (
-    <div className="flex-column">
-      <h4>My Story</h4>
-      
+    <section className="my-story">
+      <div className="flex-column">
+        <h4>My Story</h4>
+
         <p>
           From restaurants to sports broadcasting to writer and blogger, life
           has not been a straight line (in a good way). During covid, I decided
@@ -15,8 +16,8 @@ const MyStory = () => {
           it, of course). My key take a way from tech is to continuously learn,
           which has always been the plan.
         </p>
-      
-    </div>
+      </div>
+    </section>
   );
 };
 
