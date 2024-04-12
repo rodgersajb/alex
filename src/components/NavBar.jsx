@@ -51,17 +51,15 @@ const NavBar = () => {
             <a href="">
               <FaLinkedin />
             </a>
-          </li>
-          <li>
             <a href="">
               <FaTwitter />
             </a>
-          </li>
-          <li>
             <a href="">
               <FaGithub />
             </a>
           </li>
+          <li></li>
+          <li></li>
         </ul>
       </nav>
       {activeTab === "" && <Home props={headerContent[0]} />}

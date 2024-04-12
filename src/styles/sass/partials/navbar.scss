@@ -48,23 +48,44 @@
     }
   }
   ul:nth-of-type(2) {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    // display: grid;
+    // grid-template-columns: repeat(5, 1fr);
 
-    place-items: center;
+    // place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 999;
+
     width: 35%;
-    li:first-child {
-      grid-column: span 2;
-      
-    }
-    
+    li,
     a {
-      cursor: pointer;
-      transition: all ease-in-out 0.3s;
+      transition: all ease-in 0.3s;
+      z-index: 999;
       &:hover,
       &:focus {
         color: $white;
       }
     }
+    // li:nth-of-type(1) {
+    //   // grid-column: span 2;
+    //   cursor: pointer;
+    //   transition: all ease-in-out 0.3s;
+    //   &:hover,
+    //   &:focus {
+    //     color: $white;
+    //   }
+    // }
+    // li {
+    //   z-index: 50;
+    //   a {
+    //     cursor: pointer;
+    //     transition: all ease-in-out 0.3s;
+    //     &:hover,
+    //     &:focus {
+    //       color: $white;
+    //     }
+    //   }
+    // }
   }
 }
