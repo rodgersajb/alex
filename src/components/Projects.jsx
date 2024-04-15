@@ -2,6 +2,7 @@ import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 
 import ProjectCards from "./ProjectCards";
 import Footer from "./Footer";
+import FooterForm from "./FooterForm";
 
 const Projects = (props) => {
   return (
@@ -29,6 +30,7 @@ const Projects = (props) => {
       </header>
 
       <ProjectCards />
+      <FooterForm />
       <Footer />
     </section>
   );
