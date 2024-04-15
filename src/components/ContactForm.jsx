@@ -11,7 +11,7 @@ const ContactForm = () => {
       </div>
       <div className="flex-column">
         <label htmlFor="email">
-          {" "}
+          
           Email<span className="required">*</span>
         </label>
         <input type="text" id="email" placeholder="Email Address" />
