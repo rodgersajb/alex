@@ -1,6 +1,8 @@
+
 const ContactForm = () => {
   return (
-    <>
+    <section className="contact-form">
+      
       <div className="form-content">
         <h2>Feel like chatting? Me too.</h2>
         <h5>Throw me an email anytime. I will get back to you I promise.</h5>
@@ -22,7 +24,7 @@ const ContactForm = () => {
           <button>Submit Form</button>
         </div>
       </form>
-    </>
+    </section>
   );
 };
 
