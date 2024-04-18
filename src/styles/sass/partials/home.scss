@@ -20,10 +20,21 @@
       align-items: center;
       justify-content: space-between;
       width: 90%;
+      
+      
 
       margin: 0 auto;
       .flex-column {
         width: calc(100% / 2);
+
+        h2, svg, button {
+          animation: fadeInUp;
+          animation-duration: 1s;
+        }
+        svg {
+         
+          padding: 0 0 0 1rem;
+        }
       }
       .flex-column:nth-child(3) {
         align-items: center;
@@ -31,6 +42,8 @@
 
         img {
           width: 75%;
+          animation: fadeIn;
+          animation-duration: 1s;
         }
       }
 

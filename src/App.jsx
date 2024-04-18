@@ -1,4 +1,5 @@
 import "./styles/sass/style.scss";
+import 'animate.css';
 
 
 
