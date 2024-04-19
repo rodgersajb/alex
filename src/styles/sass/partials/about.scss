@@ -75,12 +75,11 @@
     p {
       min-height: 250px;
       opacity: 0;
-      transform: translateY(-30px) scale(0.9);
+      transform: translateY(-30px);
       transition: all ease-in 0.6s;
       &.active {
         opacity: 1;
-        transform: translateY(0px) scale(1);
-        
+        transform: translateY(0px);
       }
     }
   }

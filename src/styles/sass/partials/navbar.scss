@@ -1,4 +1,4 @@
-@media (min-width: 200px) and (max-width: 479px) {
+@media (max-width: 479px) {
   .navbar {
     display: none;
   }
@@ -9,11 +9,20 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin: 0 auto;
 
   background-color: transparent;
   position: fixed;
   z-index: 5;
+  transition: all ease-in-out 0.5s;
+
+  &.nav__scrolled {
+    background-color: $white;
+
+    border-radius: 4rem;
+    width: 90%;
+    margin: 2rem 0 0 5%;
+    
+  }
 
   ul {
     li {

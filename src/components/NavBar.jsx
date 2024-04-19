@@ -8,17 +8,31 @@ import FunStuff from "./FunStuff";
 import Projects from "./Projects";
 import Contact from "./Contact";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+
+import { useIntersectionObserver } from "@uidotdev/usehooks";
 
 const NavBar = () => {
+  // const navRef = useRef();
+
+  // useEffect(() => {
+  //   if (!navRef) return;
+  //   const observer = new IntersectionObserver(([entry]) => {
+  //     console.log(entry);
+
+  //     observer.observe(navRef);
+  //   });
+  // }, [navRef]);
   const [activeTab, setActiveTab] = useState("");
+  
 
   const handleTabClick = (track) => {
     setActiveTab(track);
   };
   return (
     <>
-      <nav className="navbar">
+    {entry?.isIntersecting && (
+        <nav ref={ref} className={`navbar ${navScrolled ? "nav__scrolled" : ""}`}>
         <ul>
           <li
             className={`${activeTab === "about" ? "color: red" : ""}`}
@@ -62,6 +76,8 @@ const NavBar = () => {
           <li></li>
         </ul>
       </nav>
+    )}
+    
       {activeTab === "" && <Home props={headerContent[0]} />}
       {activeTab === "about" && <About props={headerContent[1]} />}
       {activeTab === "fun-stuff" && <FunStuff />}

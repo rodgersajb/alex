@@ -34,7 +34,7 @@ const Routine = () => {
           <p className={`${active ? "active" : ""}`}>
             “Becoming a dev also came with a new admiration for low-fi, which
             will be playing in my headphones all day. if I’m away from the
-            computer, that usally means my lab Jack and I are at the dogpark.”
+            computer, that usually means my lab Jack and I are at the dogpark.”
           </p>
         </div>
       </div>
