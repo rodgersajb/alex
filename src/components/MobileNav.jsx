@@ -17,18 +17,17 @@ import { headerContent } from "../hooks/HeaderContent";
 const MobileNav = () => {
   const [activeTab, setActiveTab] = useState("");
 
-  const [navScrolled, setNavScrolled] = useState(true);
+  const [navScrolled, setNavScrolled] = useState(false);
 
   const [ref, entry] = useIntersectionObserver({
     threshold: 0,
     root: null,
-    rootMargin: "0px",
+    rootMargin: "600px",
   });
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 200) {
-       
         setNavScrolled(true);
       } else {
         setNavScrolled(false);
@@ -42,8 +41,6 @@ const MobileNav = () => {
     };
   }, []);
 
-  
-
   const handleTabClick = (track) => {
     setActiveTab(track);
   };
@@ -52,7 +49,7 @@ const MobileNav = () => {
       <nav className="mobile-nav">
         <ul>
           <li
-            className={`${activeTab === "" ? "color: red" : ""}`}
+            className={`${activeTab === "" ? "red" : ""}`}
             onClick={() => handleTabClick("about")}
           >
             <FaHandHolding />
@@ -85,25 +82,37 @@ const MobileNav = () => {
           </li>
         </ul>
       </nav>
-      
+
       <nav ref={ref} className={`navbar ${navScrolled ? "nav__scrolled" : ""}`}>
         {entry?.isIntersecting && (
           <>
             <ul>
               <li
-                className={`${activeTab === "about" ? "color: red" : ""}`}
+                className={`${
+                  activeTab === "about" && !navScrolled
+                    ? "highlighter-white"
+                    : activeTab === "about" && navScrolled && "highlighter-contrast"
+                }`} 
                 onClick={() => handleTabClick("about")}
               >
                 About
               </li>
               <li
-                className={`${activeTab === "funstuff" ? "color: red" : ""}`}
+                className={`${
+                  activeTab === "fun-stuff" && !navScrolled
+                    ? "highlighter-white"
+                    : activeTab === "fun-stuff" && navScrolled && "highlighter-contrast"
+                }`}
                 onClick={() => handleTabClick("fun-stuff")}
               >
                 Fun Stuff
               </li>
               <li
-                className={`${activeTab === "projects" ? "color: red" : ""}`}
+                className={`${
+                  activeTab === "projects" && !navScrolled
+                    ? "highlighter-white"
+                    : activeTab === "projects" && navScrolled && "highlighter-contrast"
+                }`}
                 onClick={() => handleTabClick("projects")}
               >
                 Projects
@@ -112,23 +121,27 @@ const MobileNav = () => {
             <a href="">AR</a>
             <ul>
               <li
-                className={`${activeTab === "contact" ? "color: red" : ""}`}
+                className={`${
+                  activeTab === "contact" && !navScrolled
+                    ? "highlighter-white"
+                    : activeTab === "contact" && navScrolled && "highlighter-contrast"
+                }`}
                 onClick={() => handleTabClick("contact")}
               >
                 Contact
               </li>
               <li>
-                <a href="">
+                <a href="https://linkedin.com/in/alex-rodgers-snm">
                   <FaLinkedin />
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="https://twitter.com/rodgersajb">
                   <FaTwitter />
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="https://github.com/rodgersajb">
                   <FaGithub />
                 </a>
               </li>

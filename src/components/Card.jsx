@@ -1,12 +1,35 @@
-const Card = (cards) => {
-  const card = cards.cards;
+import { useState, useEffect } from "react";
 
+import { useIntersectionObserver } from "@uidotdev/usehooks";
+
+const Card = (cards) => {
+
+    const [active, setActive] = useState(false);
+
+    const [ref, entry] = useIntersectionObserver({
+      threshold: 0,
+      root: null,
+      rootMargin: "0px",
+    });
+
+    useEffect(() => {
+      if (entry?.isIntersecting) {
+        setActive(true);
+      } else {
+        setActive(false);
+      }
+    }, [entry?.isIntersecting]);
+
+
+
+  const card = cards.cards;
   const stacks = card.stack || [];
   const icons = card.icons || [];
- 
 
   return (
-    <div className={card.class }>
+    <>
+    
+    <div ref={ref} className={`${card.class} ${active ? "active" : ""} `}>
       <div className="image-container">
         <img src={card.image} alt="" />
       </div>
@@ -23,16 +46,18 @@ const Card = (cards) => {
         <ul className="icons">
           {icons.map((icon, index) => {
             return (
-              
-              <li  key={index}>
-                {icon.key}
-                {icon}
+              <li key={index}>
+                <a href={icon.props.live}>
+                  {icon.key}
+                  {icon}
+                </a>
               </li>
             );
           })}
         </ul>
       </div>
     </div>
+    </>
   );
 };
 
