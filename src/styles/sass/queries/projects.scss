@@ -36,6 +36,34 @@
       width: 90%;
       margin: 0 auto;
       padding: 2rem 0;
+      .jobi,
+      .moviebase,
+      .heart-sync,
+      .post-it,
+      .daily-planner {
+        transform: translateY(30px);
+        opacity: 0;
+        transition: all ease-in 0.6s;
+        &.active {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .icons {
+          li {
+            font-size: 1.2rem;
+            a,
+            svg {
+              color: $black;
+            }
+            a {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 0.4rem;
+            }
+          }
+        }
+      }
       .image-container {
         min-height: 150px;
         display: flex;

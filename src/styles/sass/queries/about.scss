@@ -89,6 +89,9 @@
         .content {
             border: 2px solid $black;
             width: 100%;
+            p {
+              min-height:150px;
+            }
             .image-container {
                 height: 200px;
                 background-color: $accent;
