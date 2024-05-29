@@ -1,6 +1,6 @@
 @media (max-width: 479px) {
   .about {
-    
+    width: 100%;
       header {
         
   background-color: $white;
@@ -24,20 +24,29 @@
 }
 
 
-
+.my-story {
+  .flex-column {
+      p {
+        width: 95%;
+      }
+  }
+}
 .about-grid {
-
-    padding-top: 10%;
+    width: 100%;
+    padding-top: 7%;
 
 
     .flex-column {
         margin-top: 10%;
-        border: 2px 2px 0 2px solid $black;
+        padding: 0;
+        border: 0px 2px 2px 2px solid $black;
+        flex-wrap: wrap;
        
         .flex-container {
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 100%;
             
             .content {
                 display: flex;
@@ -45,13 +54,14 @@
             }
         }
         .text-container {
-            
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             border-bottom: 2px solid $black;
             p {
-                width: 90%;
+                width: 100%;
+                text-align: center;
             }
         }
     
@@ -68,16 +78,17 @@
         }
         p {
             color: $white;
-            width: 90%;
+            width: 100%;
         }
     }
     .flex-column:nth-child(4) {
         align-items: center;
-        padding: 2rem 0 2rem 0;
-        gap: 2rem;
+        padding: 0;
+        flex-direction: column;
+        
         .content {
             border: 2px solid $black;
-            width: 90%;
+            width: 100%;
             .image-container {
                 height: 200px;
                 background-color: $accent;

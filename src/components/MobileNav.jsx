@@ -49,14 +49,14 @@ const MobileNav = () => {
       <nav className="mobile-nav">
         <ul>
           <li
-            className={`${activeTab === "" ? "red" : ""}`}
+            className={`${activeTab === "about" ? "highlighter-prim" : ""}`}
             onClick={() => handleTabClick("about")}
           >
             <FaHandHolding />
             <h5>About</h5>
           </li>
           <li
-            className={`${activeTab === "" ? "color: red" : ""}`}
+            className={`${activeTab === "fun-stuff" ? "highlighter-prim" : ""}`}
             onClick={() => handleTabClick("fun-stuff")}
           >
             <BiParty />
@@ -91,8 +91,10 @@ const MobileNav = () => {
                 className={`${
                   activeTab === "about" && !navScrolled
                     ? "highlighter-white"
-                    : activeTab === "about" && navScrolled && "highlighter-contrast"
-                }`} 
+                    : activeTab === "about" &&
+                      navScrolled &&
+                      "highlighter-contrast"
+                }`}
                 onClick={() => handleTabClick("about")}
               >
                 About
@@ -101,7 +103,9 @@ const MobileNav = () => {
                 className={`${
                   activeTab === "fun-stuff" && !navScrolled
                     ? "highlighter-white"
-                    : activeTab === "fun-stuff" && navScrolled && "highlighter-contrast"
+                    : activeTab === "fun-stuff" &&
+                      navScrolled &&
+                      "highlighter-contrast"
                 }`}
                 onClick={() => handleTabClick("fun-stuff")}
               >
@@ -111,7 +115,9 @@ const MobileNav = () => {
                 className={`${
                   activeTab === "projects" && !navScrolled
                     ? "highlighter-white"
-                    : activeTab === "projects" && navScrolled && "highlighter-contrast"
+                    : activeTab === "projects" &&
+                      navScrolled &&
+                      "highlighter-contrast"
                 }`}
                 onClick={() => handleTabClick("projects")}
               >
@@ -124,7 +130,9 @@ const MobileNav = () => {
                 className={`${
                   activeTab === "contact" && !navScrolled
                     ? "highlighter-white"
-                    : activeTab === "contact" && navScrolled && "highlighter-contrast"
+                    : activeTab === "contact" &&
+                      navScrolled &&
+                      "highlighter-contrast"
                 }`}
                 onClick={() => handleTabClick("contact")}
               >

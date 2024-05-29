@@ -17,7 +17,8 @@
 
   &.nav__scrolled {
     background-color: $white;
-    opacity: 0.9;
+    opacity: 1;
+    filter: drop-shadow(5px 5px 5px $black);
 
     border-radius: 4rem;
     width: 90%;

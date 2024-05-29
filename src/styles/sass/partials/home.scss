@@ -27,7 +27,7 @@
       .flex-column {
         width: calc(100% / 2);
 
-        h2, svg, button {
+        h2, h4, h5, svg, button {
           animation: fadeInUp;
           animation-duration: 1s;
         }

@@ -3,9 +3,11 @@
     display: flex;
     width: 100%;
     border-radius: 2rem 2rem 0 0;
-    position: sticky;
+    position: fixed;
+    z-index: 55;
     bottom: 0;
     background-color: $white;
+    
 
     ul {
       width: 100%;
@@ -32,9 +34,7 @@
         }
       }
       .alex-logo {
-        position: absolute;
-        top: 0;
-        left: 50%;
+        
       }
     }
   }
