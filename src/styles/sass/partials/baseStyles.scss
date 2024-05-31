@@ -209,7 +209,10 @@ svg {
           }
        }
 
-
+.swiper-button-next,
+.swiper-button-prev {
+  z-index: 999;
+}
 //////////////////////////////////////////////////
 ///  put these in header query scss 🍴👇👇👇
 

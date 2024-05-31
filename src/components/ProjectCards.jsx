@@ -1,8 +1,17 @@
 import Card from "./Card";
+import { ProjectCard } from "./ProjectCard";
+import { useState } from "react";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
+import "swiper/css/bundle";
+
+import "swiper/css";
 
 import { EachElement } from "../hooks/Each";
 import icons from "../hooks/Icons";
+import { MdOutlineViewCarousel } from "react-icons/md";
+import { FaArrowDownLong } from "react-icons/fa6";
 
 import jobi from "../assets/jobi.jpg";
 import moviebase from "../assets/moviebase.jpg";
@@ -11,8 +20,11 @@ import post from "../assets/post-it.jpg";
 import planner from "../assets/planner.jpg";
 
 const ProjectCards = () => {
- 
+  const [carousel, setCarousel] = useState("");
 
+  const toggleCarousel = () => {
+    setCarousel((carousel) => !carousel);
+  };
 
   const projectCards = [
     {
@@ -108,12 +120,43 @@ Post it! This app will generate random post its displayed across the page. Users
     },
   ];
   return (
-    <div className="cards">
-      <EachElement
-        of={projectCards}
-        render={(cards, index) => <Card key={index} cards={cards} />}
-      />
-    </div>
+    <>
+      {carousel ? (
+        <FaArrowDownLong onClick={toggleCarousel} />
+      ) : (
+        <MdOutlineViewCarousel onClick={toggleCarousel} />
+      )}
+
+      {!carousel ? (
+        <div className="cards">
+          <EachElement
+            of={projectCards}
+            render={(cards, index) => <Card key={index} cards={cards} />}
+          />
+        </div>
+      ) : (
+        <div className="card">
+          <Swiper
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={50}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            {projectCards.map((cards, index) => {
+              return (
+                <SwiperSlide key={index} style={{ zIndex: "999px" }}>
+                  <ProjectCard cards={cards} />;
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </div>
+      )}
+    </>
   );
 };
 
