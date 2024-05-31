@@ -1,5 +1,6 @@
 import Card from "./Card";
 
+
 import { EachElement } from "../hooks/Each";
 import icons from "../hooks/Icons";
 
@@ -10,7 +11,9 @@ import post from "../assets/post-it.jpg";
 import planner from "../assets/planner.jpg";
 
 const ProjectCards = () => {
-  console.log(icons.FaSass);
+ 
+
+
   const projectCards = [
     {
       title: "Jobi",
