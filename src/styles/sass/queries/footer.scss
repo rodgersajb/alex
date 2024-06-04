@@ -1,0 +1,25 @@
+ 
+
+    footer {
+        .wrapper {
+            flex-direction: column-reverse;
+            gap: 2rem;
+            ul {
+                flex-direction: row;
+
+            }
+            .socials {
+                li {
+                    
+                    a {
+                        svg {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+

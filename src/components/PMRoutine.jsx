@@ -5,7 +5,7 @@ export const PMRoutine = () => {
       const [active, setActive] = useState(false);
 
       const [ref, entry] = useIntersectionObserver({
-        threshold: 0,
+        threshold: 0.1,
         root: null,
         rootMargin: "0px",
       });

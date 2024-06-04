@@ -3,8 +3,8 @@ import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-   
-
+    <>
+      <div className="footer-top"></div>
       <footer>
         <div className="wrapper">
           <h1>
@@ -37,6 +37,9 @@ const Footer = () => {
           </ul>
         </div>
       </footer>
+    </>
+   
+
       
    
   );
