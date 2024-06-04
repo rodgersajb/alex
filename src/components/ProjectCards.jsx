@@ -31,6 +31,7 @@ const ProjectCards = () => {
       title: "Jobi",
       class: "jobi",
       highlighter: "highlighter-accent",
+      color: "#ffb703",
       image: jobi,
       links: ["https://github.com/rodgersajb/jobi"],
       stack: [
@@ -47,6 +48,7 @@ const ProjectCards = () => {
     {
       title: "Moviebase",
       class: "moviebase",
+      color: "#8ecae6",
       highlighter: "highlighter-prim",
       image: moviebase,
       stack: [
@@ -60,12 +62,13 @@ const ProjectCards = () => {
           key="code"
           live="https://github.com/rodgersajb/vite-js-movie-app"
         />,
-        <icons.FaLink key="live" live="https://moviebase.alexrodgers.io" />,
+        <icons.FaLink key="link" live="https://moviebase.alexrodgers.io" />,
       ],
     },
     {
       title: "HeartSync",
       class: "heart-sync",
+      color: "#023047",
       highlighter: "highlighter-third",
       image: heartsync,
       stack: [
@@ -78,12 +81,13 @@ const ProjectCards = () => {
           key="code"
           live="https://github.com/rodgersajb/heartsync"
         />,
-        <icons.FaLink key="live" live="https://heartsync.alexrodgers.io" />,
+        <icons.FaLink key="link" live="https://heartsync.alexrodgers.io" />,
       ],
     },
     {
       title: "Post It!",
       class: "post-it",
+      color: "#fb8500",
       highlighter: "highlighter-contrast",
       image: post,
       stack: [<icons.FaSass key="sass" />, <icons.FaReact key="react" />],
@@ -102,6 +106,7 @@ Post it! This app will generate random post its displayed across the page. Users
     {
       title: "Daily Planner",
       class: "daily-planner",
+      color: "#219ebc",
       highlighter: "highlighter-second",
       image: planner,
       stack: [
@@ -115,17 +120,25 @@ Post it! This app will generate random post its displayed across the page. Users
           key="code"
           live="https://github.com/rodgersajb/daily-planner"
         />,
-        <icons.FaLink key="live" live="https://planner.alexrodgers.io" />,
+        <icons.FaLink key="link" live="https://planner.alexrodgers.io" />,
       ],
     },
   ];
   return (
     <>
-      {carousel ? (
-        <FaArrowDownLong onClick={toggleCarousel} />
-      ) : (
-        <MdOutlineViewCarousel onClick={toggleCarousel} />
-      )}
+      <div className="layout-container">
+        {carousel ? (
+          <FaArrowDownLong
+            style={{ cursor: "pointer" }}
+            onClick={toggleCarousel}
+          />
+        ) : (
+          <MdOutlineViewCarousel
+            style={{ cursor: "pointer" }}
+            onClick={toggleCarousel}
+          />
+        )}
+      </div>
 
       {!carousel ? (
         <div className="cards">
@@ -143,12 +156,14 @@ Post it! This app will generate random post its displayed across the page. Users
             navigation
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
+            style={{
+              "--swiper-navigation-color": "#171717",
+              "--swiper-pagination-color": "#171717",
+            }}
           >
             {projectCards.map((cards, index) => {
               return (
-                <SwiperSlide key={index} style={{ zIndex: "999px" }}>
+                <SwiperSlide key={index}>
                   <ProjectCard cards={cards} />;
                 </SwiperSlide>
               );

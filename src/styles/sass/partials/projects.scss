@@ -10,8 +10,26 @@
         }
       }
     }
+    .layout-container {
+      width: 75%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-end;
+      padding: 4rem 0 0 0;
+      svg {
+        font-size: 2rem;
+        transition: all ease-in-out 0.3s;
+        &:hover,
+        &:focus {
+          transform: scale(1.5);
+        }
+      }
+    }
     .card {
-      
+      // position: relative;
+      min-height: 500px;
+   
+
       .jobi,
       .moviebase,
       .heart-sync,
@@ -19,9 +37,34 @@
       .daily-planner {
         width: 75%;
         margin: 0 auto;
-        min-height: 400px;
+
         display: flex;
         gap: 2rem;
+
+        .image-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          img {
+            border-radius: 0.6rem;
+            width: 80%;
+          }
+        }
+      }
+    }
+    .cards,
+    .card {
+      .image-container,
+      .content {
+        width: calc(100% / 2);
+      }
+      .jobi,
+      .moviebase,
+      .heart-sync,
+      .post-it,
+      .daily-planner {
         transform: translateY(30px);
         opacity: 0;
         transition: all ease-in 0.6s;
@@ -29,21 +72,43 @@
           opacity: 1;
           transform: translateY(0);
         }
-        .image-container {
+      }
+      .icons {
+        gap: 1rem;
+        li {
           display: flex;
-          flex-direction: column;
           align-items: center;
-          justify-content: center;
+          font-size: 1.4rem;
+          font-weight: 600;
+          gap: 0.6rem;
+          transition: ease-in 200ms;
+
+          &:hover,
+          &:focus {
+            transition: ease 600ms;
+            transform: translateY(0.4rem);
+            cursor: pointer;
+          }
+          a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: $black;
+
+            svg {
+              padding: 0 0 0 0.4rem;
+            }
+          }
         }
       }
     }
     .cards {
       display: flex;
       width: 50%;
-      flex-direction: column;     
+      flex-direction: column;
       gap: 2rem;
       margin: 0 auto;
-      padding: 5rem 0 5rem 0;
+      padding: 0 0 5rem 0;
 
       .moviebase,
       .post-it {
@@ -64,13 +129,11 @@
           opacity: 1;
           transform: translateY(0);
         }
-        .image-container,
-        .content {
-          width: calc(100% / 2);
-        }
+
         .image-container {
           display: flex;
           align-items: center;
+
           img {
             border-radius: 0.6rem;
           }
@@ -80,6 +143,8 @@
           display: flex;
           align-items: center;
           flex-direction: column;
+          position: relative;
+
           p {
             font-size: 1.2rem;
           }
@@ -94,33 +159,6 @@
             padding: 1rem 0 0 0;
             display: flex;
             gap: 0.4rem;
-          }
-          .icons {
-            gap: 1rem;
-            li {
-              display: flex;
-              align-items: center;
-              font-size: 1.4rem;
-              font-weight: 600;
-              gap: 0.6rem;
-              transition: ease-in 600ms;
-              
-              &:hover,
-              &:focus {
-                transition: ease 200ms;
-                transform: translateY(0.4rem);
-                cursor: pointer;
-              }
-              a {
-                text-decoration: none;
-                color: $black;
-                svg {
-                    padding: 0 0 0 0.4rem;
-                }
-
-                
-              }
-            }
           }
         }
       }

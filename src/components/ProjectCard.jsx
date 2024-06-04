@@ -4,6 +4,9 @@ import { useIntersectionObserver } from "@uidotdev/usehooks";
 
 export const ProjectCard = (cards) => {
   const [active, setActive] = useState(false);
+  
+
+
 
   const [ref, entry] = useIntersectionObserver({
     threshold: 0,
@@ -25,11 +28,14 @@ export const ProjectCard = (cards) => {
 
   return (
     <>
+
       <div ref={ref} className={`${card.class} ${active ? "active" : ""} `}>
         <div className="image-container">
-          <img src={card.image} alt="" />
+          
+          <img style={{ filter: `drop-shadow(-10px 5px 5px ${card.color})` }} src={card.image} alt="" />
         </div>
         <div className="content">
+          
           <h3 className={card.highlighter}>{card.title}</h3>
           <ul className="stack">
             {stacks.map((stack, index) => {
@@ -43,7 +49,13 @@ export const ProjectCard = (cards) => {
             {icons.map((icon, index) => {
               return (
                 <li key={index}>
-                  <a href={icon.props.live}>
+                  <a
+                    href={icon.props.live}
+                    
+                    // style={{
+                    //   color: `${card.color}`,
+                    // }}
+                  >
                     {icon.key}
                     {icon}
                   </a>
