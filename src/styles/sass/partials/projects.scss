@@ -29,6 +29,7 @@
     .card {
       // position: relative;
       min-height: 500px;
+      width: 98%;
    
 
       .jobi,
@@ -206,7 +207,23 @@
 }
 
 .projects {
+  .card {
+    .jobi,
+    .moviebase,
+    .heart-sync,
+    .post-it,
+    .daily-planner {
+      .image-container {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
  background: $white;
+ p {
+  font-size: 1.2rem;
+ }
  header {
   background: $accent
  }

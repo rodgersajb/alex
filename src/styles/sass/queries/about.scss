@@ -120,18 +120,6 @@
   }
 }
 
-// @media (min-width: 480px) {
-//   .about {
-//     header {
-//       .flex-column:first-child {
-//         .button-container {
-//           width: 100%;
-//         }
-//       }
-//     }
-//   }
-// }
-
 @media (min-width: 480px) and (max-width: 768px) {
   .about {
     header {
@@ -140,7 +128,7 @@
         gap: 0.6rem;
 
         .button-container {
-          width: 60%;
+          width: 75%;
         }
       }
     }
