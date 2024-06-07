@@ -79,12 +79,19 @@
 @media (min-width: 480px) and (max-width: 768px) {
   .contact {
     header {
-      flex-direction: column-reverse;
+      .wrapper {
+
+        flex-direction: column-reverse;
+      }
       .flex-column:nth-child(3) {
         min-height: 50%;
         width: 95%;
         gap: 1.8rem;
+        h2 {
+          
+        }
         h2, h5:nth-child(4) {
+          text-align: center;
           margin: 0 auto;
         }
         h5 {
@@ -93,7 +100,7 @@
         }
       }
       .flex-column:first-child {
-        justify-content: flex-end;
+        justify-content: flex-start;
         min-height: 30%;
         img {
           width: 75%;

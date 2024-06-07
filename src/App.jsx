@@ -2,7 +2,7 @@ import "./styles/sass/style.scss";
 import "animate.css";
 
 import { useState, useEffect } from "react";
-import { useIntersectionObserver } from "@uidotdev/usehooks";
+
 
 import { Nav } from "./components/Nav";
 import Footer from "./components/Footer";
@@ -20,11 +20,6 @@ function App() {
 
   const [navScrolled, setNavScrolled] = useState(false);
 
-  const [ref, entry] = useIntersectionObserver({
-    threshold: 0,
-    root: null,
-    rootMargin: "600px",
-  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,17 +48,20 @@ function App() {
         handleTabClick={handleTabClick}
         navScrolled={navScrolled}
       />
-      
-        <div className="page-content">
-          {activeTab === "" && <Home props={headerContent[0]} />}
-          {activeTab === "about" && <About props={headerContent[1]} />}
-          {activeTab === "fun-stuff" && <FunStuff />}
-          {activeTab === "projects" && <Projects props={headerContent[2]} />}
-          {activeTab === "contact" && <Contact props={headerContent[3]} />}
-        </div>
 
-        <Footer handleTabClick={handleTabClick} />
-      
+      <div className="page-content">
+        {activeTab === "" && (
+          <Home handleTabClick={handleTabClick} headerContent={headerContent[0]} />
+        )}
+        {activeTab === "about" && (
+          <About handleTabClick={handleTabClick} headerContent={headerContent[1]} />
+        )}
+        {activeTab === "fun-stuff" && <FunStuff />}
+        {activeTab === "projects" && <Projects handleTabClick={handleTabClick} headerContent={headerContent[2]} />}
+        {activeTab === "contact" && <Contact headerContent={headerContent[3]} />}
+      </div>
+
+      <Footer handleTabClick={handleTabClick} />
     </div>
   );
 }

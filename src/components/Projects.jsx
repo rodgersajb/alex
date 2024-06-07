@@ -4,43 +4,45 @@ import ProjectCards from "./ProjectCards";
 
 import FooterForm from "./FooterForm";
 
-const Projects = (props) => {
+const Projects = ({ handleTabClick, headerContent }) => {
   return (
-    <section className={props.props.class}>
+    <section className={headerContent.class}>
       <header>
         <div className="wrapper">
+          <div className="flex-column">
+            <h2 className={headerContent.style1}>{headerContent.heading1}</h2>
+            <h4 className={headerContent.style1}>{headerContent.heading2}</h4>
 
-        <div className="flex-column">
-          <h2 className={props.props.style1}>{props.props.heading1}</h2>
-          <h4 className={props.props.style1}>{props.props.heading2}</h4>
-
-          <div className="button-container">
-            <button>{props.props.button1}</button>
-            <button>{props.props.button2}</button>
+            <div className="button-container">
+              <button onClick={() => handleTabClick("")}>
+                {headerContent.button1}
+              </button>
+              <button onClick={() => handleTabClick("contact")}>
+                {headerContent.button2}
+              </button>
+            </div>
           </div>
-        </div>
-        <div className="socials">
-          <div className="border">
-            <a href="https://github.com/rodgersajb">
-              <FaGithub />
-            </a>
-            <a href="https://linkedin.com/in/alex-rodgers-snm">
-              <FaLinkedin />
-            </a>
-            <a href="https://twitter.com/rodgersajb">
-              <FaTwitter />
-            </a>
+          <div className="socials">
+            <div className="border">
+              <a href="https://github.com/rodgersajb">
+                <FaGithub />
+              </a>
+              <a href="https://linkedin.com/in/alex-rodgers-snm">
+                <FaLinkedin />
+              </a>
+              <a href="https://twitter.com/rodgersajb">
+                <FaTwitter />
+              </a>
+            </div>
           </div>
-        </div>
-        <div className="flex-column">
-          <img src={props.props.image} alt="" />
-        </div>
+          <div className="flex-column">
+            <img src={headerContent.image} alt="" />
+          </div>
         </div>
       </header>
 
       <ProjectCards />
       <FooterForm />
-      
     </section>
   );
 };

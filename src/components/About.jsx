@@ -6,21 +6,24 @@ import Routine from "./Routine";
 import FooterForm from "./FooterForm";
 import Footer from "./Footer";
 
-const About = (props) => {
+const About = ( {handleTabClick, headerContent}) => {
+
+  console.log(headerContent, 'header cotent')
+
   return (
-    <section className={props.props.class}>
+    <section className={headerContent.class}>
       <header>
         <div className="wrapper">
           <div className="flex-column">
-            <h2 className={props.class}>{props.props.title}</h2>
-            <h2 className={props.class}>{props.props.heading2}</h2>
-            <h2 className={props.class}>
-              {props.props.heading3}
-              {props.props.icon}
+            <h2 className={headerContent.class}>{headerContent.title}</h2>
+            <h2 className={headerContent.class}>{headerContent.heading2}</h2>
+            <h2 className={headerContent.class}>
+              {headerContent.heading3}
+              {headerContent.icon}
             </h2>
             <div className="button-container">
-              <button>{props.props.button1}</button>
-              <button>{props.props.button2}</button>
+              <button onClick={() => handleTabClick("projects")}>{headerContent.button1}</button>
+              <button onClick={() => handleTabClick("contact")}>{headerContent.button2}</button>
             </div>
           </div>
           <div className="socials">
@@ -37,7 +40,7 @@ const About = (props) => {
             </div>
           </div>
           <div className="flex-column">
-            <img src={props.props.image} alt="" />
+            <img src={headerContent.image} alt="" />
           </div>
         </div>
       </header>

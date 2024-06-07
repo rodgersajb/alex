@@ -19,6 +19,7 @@
             }
         }
         .flex-column:last-child {
+         
           
           img {
             width: 65%;
@@ -26,6 +27,9 @@
           }
         }
       .flex-column {
+         h2 {
+            background: none;
+          }
         h2,
         h4,
         h5,

@@ -5,6 +5,10 @@
       background-color: $white;
       .flex-column:first-child {
         background-color: $contrast;
+        justify-content: center;
+        h2 {
+          text-align: center;
+        }
         
         .flex-column:nth-child(3) {
            padding: 0;

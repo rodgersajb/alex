@@ -1,13 +1,10 @@
 @media (min-width: 480px) {
-
   footer {
     background: $primary;
     min-height: 400px;
     display: flex;
     align-items: center;
     width: 100%;
-    
-    
 
     /// svg stuff
     background-color: #8ecae6;
@@ -25,6 +22,12 @@
           font-family: $accent-text;
           color: $black;
           text-decoration: none;
+          cursor: pointer;
+          transition: all ease-in-out 0.3s;
+          &:hover,
+          &:focus {
+            color: $white;
+          }
         }
       }
       ul {
@@ -34,6 +37,12 @@
         li {
           font-size: 1.6rem;
           font-weight: 600;
+          cursor: pointer;
+          transition: all ease-in-out 0.3s;
+          &:hover,
+          &:focus {
+            color: $white;
+          }
         }
       }
       .socials {
@@ -41,6 +50,12 @@
         li {
           a {
             color: $black;
+            cursor: pointer;
+            transition: all ease-in-out 0.3s;
+            &:hover,
+            &:focus {
+              color: $white;
+            }
           }
         }
       }
