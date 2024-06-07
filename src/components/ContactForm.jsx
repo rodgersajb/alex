@@ -1,24 +1,39 @@
 const ContactForm = () => {
   return (
-    <form id="contact-form"action="">
+    <form
+      id="contact-form"
+      action="https://formsubmit.co/7f3095a1a169339afa8ac7d95d4c0f84"
+      method="POST"
+    >
       <div className="flex-column">
         <label htmlFor="first-name">First Name</label>
-        <input id="first-name" type="text" placeholder="First Name" />
+        <input
+          name="name"
+          id="name"
+          type="text"
+          placeholder="First Name"
+          required
+        />
       </div>
       <div className="flex-column">
         <label htmlFor="last-name">Last Name</label>
-        <input id="last-name" type="text" placeholder="...if you want" />
+        <input name="name" id="name" type="text" placeholder="...if you want" />
       </div>
       <div className="flex-column">
         <label htmlFor="email">
-          
           Email<span className="required">*</span>
         </label>
-        <input type="text" id="email" placeholder="Email Address" />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email Address"
+          required
+        />
       </div>
       <div className="flex-column">
         <label htmlFor="subject">Subject</label>
-        <input type="text" id="subject" placeholder="subject" />
+        <input name="subject" type="text" id="subject" placeholder="subject" />
       </div>
       <div className="flex-column">
         <label htmlFor="message">
@@ -30,13 +45,12 @@ const ContactForm = () => {
           cols="30"
           rows="10"
           placeholder="Your Message"
-          defaultValue="Your Message"
-        >
-          
-        </textarea>
+          type="text"
+          required
+        ></textarea>
       </div>
       <div className="button-container">
-        <button>Send Away!</button>
+        <button type="submit">Send Away!</button>
       </div>
     </form>
   );
