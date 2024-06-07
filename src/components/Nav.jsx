@@ -16,7 +16,43 @@ import { useRef } from "react";
   });
 
   return (
-    
+    <>
+      <nav className="mobile-nav">
+        <ul>
+          <li onClick={() => handleTabClick("about")}>
+            <FaHandHolding
+              className={`${activeTab === "about" ? "prim" : ""}`}
+            />
+            <h5 className={`${activeTab === "about" ? "prim" : ""}`}>About</h5>
+          </li>
+          <li onClick={() => handleTabClick("fun-stuff")}>
+            <BiParty className={`${activeTab === "fun-stuff" ? "prim" : ""}`} />
+            <h5 className={`${activeTab === "fun-stuff" ? "prim" : ""}`}>
+              Fun Stuff
+            </h5>
+          </li>
+
+          <li className="alex-logo">
+            <h5 className="logo-text">AR</h5>
+          </li>
+          <li onClick={() => handleTabClick("projects")}>
+            <BiCodeAlt
+              className={`${activeTab === "projects" ? "prim" : ""}`}
+            />
+            <h5 className={`${activeTab === "projects" ? "prim" : ""}`}>
+              Projects
+            </h5>
+          </li>
+          <li onClick={() => handleTabClick("contact")}>
+            <BiMobileAlt
+              className={`${activeTab === "contact" ? "prim" : ""}`}
+            />
+            <h5 className={`${activeTab === "contact" ? "prim" : ""}`}>
+              Contact
+            </h5>
+          </li>
+        </ul>
+      </nav>
       <nav ref={ref} className={`navbar ${navScrolled ? "nav__scrolled" : ""}`}>
         {entry?.isIntersecting && (
           <>
@@ -91,9 +127,7 @@ import { useRef } from "react";
           </>
         )}
       </nav>
-
-      
-   
+    </>
   );
 };
 

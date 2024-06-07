@@ -4,6 +4,10 @@
   .projects,
   .contact {
     header {
+      height: 100svh;
+      .wrapper {
+        height: 100%;
+      }
         .socials {
             .border {
                 a {
@@ -13,6 +17,14 @@
                     }
                 }
             }
+        }
+        .flex-column:last-child {
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 75%;
+            
+          }
         }
       .flex-column {
         h2,

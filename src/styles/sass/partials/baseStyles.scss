@@ -219,6 +219,24 @@ svg {
 .swiper-button-prev {
   z-index: 999;
 }
+
+.prim {
+  color: $primary;
+}
+.accent-color {
+  color: $accent;
+}
+.contrast-color {
+  color: $contrast;
+}
+
+.second-color {
+  color: $secondary
+}
+
+.third-color {
+  color: $third
+}
 //////////////////////////////////////////////////
 ///  put these in header query scss 🍴👇👇👇
 
