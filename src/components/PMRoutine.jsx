@@ -19,7 +19,7 @@ export const PMRoutine = () => {
       }, [entry?.isIntersecting]);
   return (
     <div className="content">
-      <div className="image-container"></div>
+      {/* <div className="image-container"></div> */}
       <div className="container">
         <h3 className="highlighter-second">In the PM</h3>
         <p className={`${active ? "active" : ""}`}>

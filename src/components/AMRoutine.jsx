@@ -6,7 +6,7 @@ export const AMRoutine = () => {
         const [active, setActive] = useState(false);
 
         const [ref, entry] = useIntersectionObserver({
-          threshold: 0.1,
+          threshold: 0,
           root: null,
           rootMargin: "0px",
         });
@@ -20,7 +20,7 @@ export const AMRoutine = () => {
         }, [entry?.isIntersecting]);
   return (
     <div className="content">
-      <div className="image-container"></div>
+      {/* <div className="image-container"></div> */}
       <div className="container">
         <h3 className="highlighter-contrast">In the AM</h3>
         <p ref={ref} className={`${active ? "active" : ""}`}>

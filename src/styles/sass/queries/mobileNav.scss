@@ -7,7 +7,7 @@
     z-index: 55;
     bottom: 0;
     background-color: $white;
-    margin-top: 5rem;
+    
     
 
     ul {
@@ -35,7 +35,10 @@
         }
       }
       .alex-logo {
-        
+        .logo-text {
+          font-family: $accent-text;
+          font-size: 1.6rem;
+        }
       }
     }
   }

@@ -18,9 +18,15 @@ const Home = (props) => {
         </div>
         <div className="socials">
           <div className="border">
-            <FaGithub />
-            <FaLinkedin />
-            <FaTwitter />
+            <a href="https://github.com/rodgersajb">
+              <FaGithub />
+            </a>
+            <a href="https://linkedin.com/in/alex-rodgers-snm">
+              <FaLinkedin />
+            </a>
+            <a href="https://twitter.com/rodgersajb">
+              <FaTwitter />
+            </a>
           </div>
         </div>
         <div className="flex-column">

@@ -87,8 +87,9 @@ const ProjectCards = () => {
     {
       title: "Post It!",
       class: "post-it",
-      color: "#fb8500",
-      highlighter: "highlighter-contrast",
+      color: "#219ebc",
+
+      highlighter: "highlighter-second",
       image: post,
       stack: [<icons.FaSass key="sass" />, <icons.FaReact key="react" />],
       content: `
@@ -106,8 +107,8 @@ Post it! This app will generate random post its displayed across the page. Users
     {
       title: "Daily Planner",
       class: "daily-planner",
-      color: "#219ebc",
-      highlighter: "highlighter-second",
+      color: "#fb8500",
+      highlighter: "highlighter-contrast",
       image: planner,
       stack: [
         <icons.FaSass key="sass" />,

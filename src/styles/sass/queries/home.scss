@@ -1,0 +1,33 @@
+@media (max-width: 479px) {
+  .home,
+  .about,
+  .projects,
+  .contact {
+    header {
+        .socials {
+            .border {
+                a {
+                    color: $black;
+                    svg {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+      .flex-column {
+        h2,
+        h4,
+        h5,
+        svg,
+        button {
+          animation: fadeInUp;
+          animation-duration: 1s;
+        }
+        img {
+          animation: fadeInUp;
+          animation-duration: 1s;
+        }
+      }
+    }
+  }
+}

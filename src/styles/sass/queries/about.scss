@@ -5,6 +5,15 @@
       background-color: $white;
       .flex-column:first-child {
         background-color: $contrast;
+        
+        .flex-column:nth-child(3) {
+           padding: 0;
+           justify-content: flex-end;
+           background: pink;
+        }
+      
+       
+        
       }
       .socials {
         &::after {
@@ -34,7 +43,7 @@
       padding-top: 7%;
 
       .flex-column {
-        margin-top: 10%;
+        
         padding: 0;
         border: 0px 2px 2px 2px solid $black;
         flex-wrap: wrap;
@@ -48,7 +57,9 @@
           .content {
             display: flex;
             gap: 1rem;
+            margin: 0.8rem 0 0 0;
           }
+         
         }
         .text-container {
           width: 100%;
@@ -65,8 +76,9 @@
     }
     .flex-column:nth-child(3) {
       align-items: center;
-      padding: 2rem 0 2rem 0;
+      padding: 2rem 0 0rem 0;
       gap: 1rem;
+      justify-content: flex-end;
 
       background: $third;
       h4 {
@@ -117,10 +129,23 @@
 // }
 
 @media (min-width: 480px) and (max-width: 768px) {
+  .about {
+    header {
+      .flex-column:first-child {
+        min-height: 45%;
+        gap: 0.6rem;
+
+        .button-container {
+          width: 60%;
+        }
+      }
+    }
+  }
   .about-grid {
     .flex-column {
       flex-direction: column;
       padding: 0;
+      min-height: 180px;
       .flex-container {
         width: 100%;
         border-bottom: 2px solid $black;
@@ -133,27 +158,23 @@
         width: 85%;
       }
     }
-    
   }
   .flex-column:nth-child(4) {
-      width: 100%;
-      flex-wrap: wrap;
-      .content {
-        width: 95%;
-         p {
-          min-height: 150px;
-         }
-        .container {
-          
-        }
+    width: 100%;
+    flex-wrap: wrap;
+    .content {
+      width: 95%;
+      p {
+        min-height: 150px;
+      }
+      .container {
       }
     }
-
+  }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .about {
     header {
-     
       .flex-column:nth-child(3) {
         img {
           width: 85%;

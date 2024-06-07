@@ -1,6 +1,7 @@
 @media (min-width: 479px) {
   .projects {
     header {
+      
       .flex-column:nth-child(3) {
         align-items: center;
         justify-content: center;
@@ -56,6 +57,7 @@
     }
     .cards,
     .card {
+      cursor: pointer;
       .image-container,
       .content {
         width: calc(100% / 2);
@@ -201,4 +203,11 @@
 
 
 
+}
+
+.projects {
+ background: $white;
+ header {
+  background: $accent
+ }
 }

@@ -1,4 +1,5 @@
  
+@media (min-width: 480px) and (max-width: 768px) {
 
     footer {
         .wrapper {
@@ -7,6 +8,10 @@
             ul {
                 flex-direction: row;
 
+            }
+            ul:nth-child(3), ul:nth-child(2) {
+                width: 80%;
+                justify-content: space-between
             }
             .socials {
                 li {
@@ -20,6 +25,7 @@
             }
         }
     }
+}
 
 
 
