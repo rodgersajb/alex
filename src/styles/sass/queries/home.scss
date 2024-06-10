@@ -1,4 +1,15 @@
 @media (max-width: 479px) {
+
+  .home,
+  .about {
+    header {
+      .flex-column:first-child {
+        .button-container {
+          width: 85%;
+        }
+      }
+    }
+  }
   .home,
   .about,
   .projects,
