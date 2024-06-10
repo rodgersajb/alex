@@ -2,6 +2,7 @@ import "./styles/sass/style.scss";
 import "animate.css";
 
 import { useState, useEffect } from "react";
+import { Suspense } from "react";
 
 
 import { Nav } from "./components/Nav";
