@@ -1,4 +1,8 @@
 const ContactForm = () => {
+  
+
+
+
   return (
     <form
       id="contact-form"
@@ -50,7 +54,12 @@ const ContactForm = () => {
         ></textarea>
       </div>
       <div className="button-container">
-        <button type="submit">Send Away!</button>
+       
+
+        <button type="submit">
+          Send Away!
+        </button>
+      
       </div>
     </form>
   );

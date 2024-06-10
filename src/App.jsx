@@ -1,9 +1,9 @@
 import "./styles/sass/style.scss";
 import "animate.css";
+import { RotatingLines } from "react-loader-spinner";
 
 import { useState, useEffect } from "react";
 import { Suspense } from "react";
-
 
 import { Nav } from "./components/Nav";
 import Footer from "./components/Footer";
@@ -20,7 +20,6 @@ function App() {
   const [activeTab, setActiveTab] = useState("");
 
   const [navScrolled, setNavScrolled] = useState(false);
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,20 +48,52 @@ function App() {
         handleTabClick={handleTabClick}
         navScrolled={navScrolled}
       />
-
-      <div className="page-content">
-        {activeTab === "" && (
-          <Home handleTabClick={handleTabClick} headerContent={headerContent[0]} />
-        )}
-        {activeTab === "about" && (
-          <About handleTabClick={handleTabClick} headerContent={headerContent[1]} />
-        )}
-        {activeTab === "fun-stuff" && <FunStuff />}
-        {activeTab === "projects" && <Projects handleTabClick={handleTabClick} headerContent={headerContent[2]} />}
-        {activeTab === "contact" && <Contact headerContent={headerContent[3]} />}
-      </div>
+      <Suspense fallback={<Loading />}>
+        <div className="page-content">
+          {activeTab === "" && (
+            <Home
+              handleTabClick={handleTabClick}
+              headerContent={headerContent[0]}
+            />
+          )}
+          {activeTab === "about" && (
+            <About
+              handleTabClick={handleTabClick}
+              headerContent={headerContent[1]}
+            />
+          )}
+          {activeTab === "fun-stuff" && <FunStuff />}
+          {activeTab === "projects" && (
+            <Projects
+              handleTabClick={handleTabClick}
+              headerContent={headerContent[2]}
+            />
+          )}
+          {activeTab === "contact" && (
+            <Contact headerContent={headerContent[3]} />
+          )}
+        </div>
+      </Suspense>
 
       <Footer handleTabClick={handleTabClick} />
+    </div>
+  );
+}
+
+function Loading() {
+  return (
+    <div className="loading">
+      <RotatingLines
+        visible={true}
+        height="96"
+        width="96"
+        color="#fcfcfc"
+        strokeWidth="5"
+        animationDuration="0.75"
+        ariaLabel="rotating-lines-loading"
+        wrapperStyle={{}}
+        wrapperClass=""
+      />
     </div>
   );
 }

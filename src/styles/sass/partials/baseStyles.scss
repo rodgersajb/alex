@@ -45,6 +45,13 @@ footer {
   display: grid;
 }
 
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4rem;
+}
+
 img {
   width: 100%;
 }
