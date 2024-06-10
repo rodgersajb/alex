@@ -87,7 +87,7 @@ function Loading() {
         visible={true}
         height="96"
         width="96"
-        color="#fcfcfc"
+        color="#171717"
         strokeWidth="5"
         animationDuration="0.75"
         ariaLabel="rotating-lines-loading"
