@@ -53,7 +53,7 @@ const NavBar = () => {
             Projects
           </li>
         </ul>
-        <a href="">AR</a>
+        <a href="/">AR</a>
         <ul>
           <li
             className={`${activeTab === "contact" ? "color: red" : ""}`}

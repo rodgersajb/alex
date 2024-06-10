@@ -1,15 +1,8 @@
 import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 
-
-
-
-
-const Footer = ({handleTabClick}) => {
- 
-
+const Footer = ({ handleTabClick }) => {
   return (
     <>
-      
       <footer>
         <div className="wrapper">
           <h1>

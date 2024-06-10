@@ -33,7 +33,7 @@ import { useRef } from "react";
           </li>
 
           <li className="alex-logo">
-            <h5 className="logo-text">AR</h5>
+            <a href="/" className="logo-text">AR</a>
           </li>
           <li onClick={() => handleTabClick("projects")}>
             <BiCodeAlt
