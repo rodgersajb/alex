@@ -1,0 +1,66 @@
+@media (min-width: 480px) {
+  .fun-stuff {
+    header {
+      .flex-column:nth-child(3) {
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 75%;
+          animation: fadeIn;
+          animation-duration: 1s;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .fun-stuff {
+    header {
+      
+      background-color: $white;
+      .wrapper {
+        height: 100%;
+      }
+      .flex-column:first-child {
+        background-color: $third;
+        justify-content: center;
+        gap: 0.4rem;
+        h1,
+        h4,
+        p {
+          z-index: 5;
+          color: $white;
+        }
+        p {
+            width: 95%;
+            text-align: center;
+        }
+        .button-container {
+            padding: 0;
+            width: 85%;
+
+        }
+      }
+      .socials {
+        &::after {
+          background-color: $primary;
+        }
+        &::before {
+          background-color: $secondary;
+        }
+        .border {
+            a {
+                color: $black;
+            }
+        }
+      }
+      .flex-column:last-child {
+        background-color: $primary;
+        img {
+          width: 75%;
+        }
+      }
+    }
+  }
+}

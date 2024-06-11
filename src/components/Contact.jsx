@@ -34,7 +34,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="flex-column">
-          <h2 className="highlighter-prim desktop">Contact Alex</h2>
+          <h2 className="desktop">Contact Alex</h2>
           <h5>
             <span className="highlighter-second white">Question?</span> Thinking
             about working together but need to know more? Need a

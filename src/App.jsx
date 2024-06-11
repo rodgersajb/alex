@@ -62,7 +62,12 @@ function App() {
               headerContent={headerContent[1]}
             />
           )}
-          {activeTab === "fun-stuff" && <FunStuff />}
+          {activeTab === "fun-stuff" && (
+            <FunStuff
+              handleTabClick={handleTabClick}
+              headerContent={headerContent[4]}
+            />
+          )}
           {activeTab === "projects" && (
             <Projects
               handleTabClick={handleTabClick}
